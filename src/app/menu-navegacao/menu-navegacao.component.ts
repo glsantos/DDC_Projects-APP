@@ -12,17 +12,13 @@ declare var closeOnClick: any;
 export class MenuNavegacaoComponent implements OnInit {
 
   title = 'DDC Projects';
- 
+  
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  private interageMenu(){
+
+    $('.dropdown-button').dropdown('open');
   }
-
-  private itemDropCadastros(){
-
-    alert('antes');
-    $(".dropdown-trigger").dropdown();
-    alert('depois');
-  }
-
 }

@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
+import { NgxEditorModule } from 'ngx-editor';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { MaterializeModule } from 'angular2-materialize';
@@ -21,7 +25,7 @@ import { ProfissionalComponent } from './cadastros/profissional/profissional.com
 import { EmpresaComponent } from './cadastros/empresa/empresa.component';
 import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
-import { ServicoComponent } from './servico/servico.component';
+import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +47,15 @@ import { ServicoComponent } from './servico/servico.component';
     EmpresaComponent,
     DepartamentoComponent,
     TipoDepartamentoComponent,
-    ServicoComponent
+    ServicoAtividadesComponent,
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEditorModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

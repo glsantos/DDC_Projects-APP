@@ -1,0 +1,45 @@
+.padrao-branco-background{
+
+    background-color: #e1e1e1;
+}
+
+.padrao-background{
+
+    background-color:#d11d32;
+}
+
+.padrao-color{
+    color:#d11d32 ;
+}
+
+.padrao-claro-background{
+
+    background-color:#de5d6c;;
+}
+.padrao-claro-color{
+
+    color:#de5d6c;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img{
+    margin-bottom: 0.3rem;
+}
+
+.block {
+    margin-bottom: 1rem;
+}
+
+.htmlblock html {
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0.5rem;
+        background-color: #f1f1f1;
+        max-height: 10rem;
+        overflow: auto;
+ 
+}
