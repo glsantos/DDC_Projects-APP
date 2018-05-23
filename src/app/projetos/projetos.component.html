@@ -6,44 +6,52 @@
         Projetos
       </div>
       <div class="collapsible-body">
-          <div class="input-field col s6 s12 red-text">
-              <i class="red-text material-icons prefix">search</i>
-              <input type="text" placeholder="Pesquise um Projeto" id="autocomplete-input" class="autocomplete red-text" >
-              </div>
+        <div class="input-field col s6 s12 red-text">
+          <i class="red-text material-icons prefix">search</i>
+          <input type="text" placeholder="Pesquise um Projeto" id="autocomplete-input" class="autocomplete red-text">
+        </div>
         <table class="responsive-table bordered striped centered highlight">
           <thead>
             <tr>
               <th>Cód.</th>
               <th>Projeto</th>
+              <th>Produto</th>
               <th>Cliente</th>
               <th>Início</th>
+              <th>Previsão</th>
               <th>Detalhes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>001</td>
-              <td>Mercury</td>
-              <td>Atento</td>
+              <td>Projeto KeyStone</td>
+              <td>KeyStone</td>
+              <td>Condomínio X</td>
               <td>11/05/2018</td>
+              <td>23/12/2018</td>
               <td class="centered">
                 <i class="material-icons">remove_red_eye</i>
               </td>
             </tr>
             <tr>
-              <td>80982</td>
+              <td>12</td>
               <td>Gerenciar Documentos e Atividades</td>
-              <td>Claro</td>
-              <td>11/05/2014</td>
+              <td>DDC Projects</td>
+              <td>ddCom Systems</td>
+              <td>14/05/2018</td>
+              <td>25/12/2018</td>
               <td class="centered">
                 <i class="material-icons">remove_red_eye</i>
               </td>
             </tr>
             <tr>
-              <td>763</td>
-              <td>Mercury</td>
-              <td>Itaú</td>
-              <td>11/05/2018</td>
+              <td>120</td>
+              <td>Projeto Mercury</td>
+              <td>Mercury Modificado</td>
+              <td>Atento</td>
+              <td>19/03/2018</td>
+              <td>27/08/2018</td>
               <td class="centered">
                 <i class="material-icons">remove_red_eye</i>
               </td>
@@ -70,9 +78,9 @@
                 <i class="material-icons prefix">supervised_user_circle</i>
                 <select class="">
                   <option value="" disabled selected>Selecione um Cliente</option>
-                  <option value="1">Itaú 1</option>
-                  <option value="2">NmGemeria 2</option>
-                  <option value="3">Mercury 3</option>
+                  <option value="1">Itaú</option>
+                  <option value="2">Atento</option>
+                  <option value="3">Cliente Cliente</option>
                 </select>
                 <label>Cliente</label>
               </div>
@@ -83,20 +91,10 @@
                 <select>
                   <option value="" disabled selected>Selecione um Produto</option>
                   <option value="1">Mercury 1</option>
-                  <option value="2">Mercury 2</option>
+                  <option value="2">Mercury 2</option>s
                   <option value="3">Mercury 3</option>
                 </select>
                 <label>Produto</label>
-              </div>
-              <div class="input-field col s12 l6 m6">
-                <i class="material-icons prefix">more</i>
-                <select>
-                  <option value="" disabled selected>Selecione um Motivo</option>
-                  <option value="1">Motivo 1</option>
-                  <option value="2">Motivo 2</option>
-                  <option value="3">Motivo 3</option>
-                </select>
-                <label>Motivo</label>
               </div>
             </div>
 
@@ -112,7 +110,9 @@
               <div class="col s12 l6">
                 <div class="file-field input-field">
                   <div class="btn padrao-background">
-                    <span><i class="material-icons">attach_file</i></span>
+                    <span>
+                      <i class="material-icons">attach_file</i>
+                    </span>
                     <input type="file" multiple>
                   </div>
                   <div class="file-path-wrapper">
@@ -124,10 +124,8 @@
 
             <div class="row">
               <div class="input-field col s12 l12 m12">
-                <!--<app-ngx-editor></app-ngx-editor>-->
-                <div class="editor block">
-                  <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
-                </div>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Detalhes/Descrição</label>
               </div>
             </div>
             <div class="row">

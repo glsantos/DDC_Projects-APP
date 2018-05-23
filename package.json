@@ -30,6 +30,7 @@
     "materialize-css": "^0.100.2",
     "ngx-bootstrap": "^3.0.0",
     "ngx-editor": "^3.3.0",
+    "ngx-quill-editor": "^2.2.2",
     "rxjs": "^6.1.0",
     "rxjs-compat": "^6.1.0",
     "zone.js": "^0.8.26"

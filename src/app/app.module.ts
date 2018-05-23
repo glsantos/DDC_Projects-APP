@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { NgxEditorModule } from 'ngx-editor';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -27,6 +26,7 @@ import { DepartamentoComponent } from './cadastros/departamento/departamento.com
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,15 +47,14 @@ import { ServicoAtividadesComponent } from './servico-atividades/servico-ativida
     EmpresaComponent,
     DepartamentoComponent,
     TipoDepartamentoComponent,
-    ServicoAtividadesComponent,
+    ServicoAtividadesComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     AppRoutingModule,
-    NgxEditorModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
