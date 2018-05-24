@@ -16,8 +16,7 @@ export class ServicoAtividadesComponent implements OnInit {
   ngOnInit() {
 
     $('select').material_select();
+    $('.collapsible').collapsible();
   }
-
-
   
 }

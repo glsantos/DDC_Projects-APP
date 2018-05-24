@@ -25,6 +25,7 @@ import { EmpresaComponent } from './cadastros/empresa/empresa.component';
 import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
+import { ModalProjetosComponent } from './modal-projetos/modal-projetos.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ServicoAtividadesComponent } from './servico-atividades/servico-ativida
     EmpresaComponent,
     DepartamentoComponent,
     TipoDepartamentoComponent,
-    ServicoAtividadesComponent
+    ServicoAtividadesComponent,
+    ModalProjetosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,35 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
 
 declare var $: any;
 declare var JQuery: any;
-declare var closeOnClick: any;
+
 
 @Component({
-  selector: 'app-projetos',
-  templateUrl: './projetos.component.html',
-  styleUrls: ['./projetos.component.css']
+  selector: 'app-modal-projetos',
+  templateUrl: './modal-projetos.component.html',
+  styleUrls: ['./modal-projetos.component.css']
 })
-export class ProjetosComponent implements OnInit {
-
-
-  editorConfig = {
-    editable: true,
-    spellcheck: false,
-    height: '10rem',
-    minHeight: '5rem',
-    placeholder: 'Type something. Test the Editor... ヽ(^。^)丿',
-    translate: 'no'
-  };
-
+export class ModalProjetosComponent implements OnInit {
 
   constructor() { }
-  
+
   ngOnInit() {
 
+    $('.modal').modal();
     $('select').material_select();
-    $('.collapsible').collapsible();
-    
+  }
+
+  private pegaDado(){
+
+    var nome = $("[name=txt_nome_projeto]").val();
+    alert(nome);
   }
 
   private clickDate(){
@@ -42,7 +35,7 @@ export class ProjetosComponent implements OnInit {
       weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
       today: 'Hoje',
       clear: 'Limpar',
-      close: 'Pronto',
+      close: 'OK',
       labelMonthNext: 'Próximo mês',
       labelMonthPrev: 'Mês anterior',
       labelMonthSelect: 'Selecione um mês',
@@ -53,4 +46,5 @@ export class ProjetosComponent implements OnInit {
       container: undefined, // ex. 'body' will append picker to body
     });
   }
-} 
+
+}
