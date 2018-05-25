@@ -3,20 +3,21 @@ import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var JQuery: any;
 
-
 @Component({
-  selector: 'app-modal-projetos',
-  templateUrl: './modal-projetos.component.html',
-  styleUrls: ['./modal-projetos.component.css']
+  selector: 'app-cadastro-projeto',
+  templateUrl: './cadastro-projeto.component.html',
+  styleUrls: ['./cadastro-projeto.component.css']
 })
-export class ModalProjetosComponent implements OnInit {
+export class CadastroProjetoComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
 
+
     $('.modal').modal();
     $('select').material_select();
+    $('ul.tabs').tabs(); 
   }
 
   private pegaDado(){
@@ -40,10 +41,14 @@ export class ModalProjetosComponent implements OnInit {
       labelMonthPrev: 'Mês anterior',
       labelMonthSelect: 'Selecione um mês',
       labelYearSelect: 'Selecione um ano',
+      format: 'dd/mm/yyyy',
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15, // Definindo 15 anos depois do ano atual
       closeOnSelect: false, // Fechando após selecionar a data no calendário
       container: undefined, // ex. 'body' will append picker to body
+      onClose: function() {
+        $(document.activeElement).blur()
+      }
     });
   }
 

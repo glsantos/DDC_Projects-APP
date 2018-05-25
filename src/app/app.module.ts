@@ -25,7 +25,10 @@ import { EmpresaComponent } from './cadastros/empresa/empresa.component';
 import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
-import { ModalProjetosComponent } from './modal-projetos/modal-projetos.component';
+import { CadastroProjetoComponent } from './cadastro-projeto/cadastro-projeto.component';
+import { CadastroRequisitosComponent } from './cadastro-requisitos/cadastro-requisitos.component';
+import { CadastroDetalhamentoComponent } from './cadastro-detalhamento/cadastro-detalhamento.component';
+import { CadastroResumoComponent } from './cadastro-resumo/cadastro-resumo.component';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { ModalProjetosComponent } from './modal-projetos/modal-projetos.componen
     DepartamentoComponent,
     TipoDepartamentoComponent,
     ServicoAtividadesComponent,
-    ModalProjetosComponent
+    CadastroProjetoComponent,
+    CadastroResumoComponent,
+    CadastroDetalhamentoComponent,
+    CadastroRequisitosComponent
   ],
   imports: [
     BrowserModule,

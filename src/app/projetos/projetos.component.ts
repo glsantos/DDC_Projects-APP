@@ -22,14 +22,12 @@ export class ProjetosComponent implements OnInit {
     translate: 'no'
   };
 
-
   constructor() { }
   
   ngOnInit() {
-
+    
     $('select').material_select();
     $('.collapsible').collapsible();
-    
   }
 
   private clickDate(){
