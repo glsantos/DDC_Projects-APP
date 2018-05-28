@@ -26,9 +26,9 @@ import { DepartamentoComponent } from './cadastros/departamento/departamento.com
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
 import { CadastroProjetoComponent } from './cadastro-projeto/cadastro-projeto.component';
-import { CadastroRequisitosComponent } from './cadastro-requisitos/cadastro-requisitos.component';
 import { CadastroDetalhamentoComponent } from './cadastro-detalhamento/cadastro-detalhamento.component';
 import { CadastroResumoComponent } from './cadastro-resumo/cadastro-resumo.component';
+import { CadastroProdutoRequisitosComponent } from './cadastro-produto-requisitos/cadastro-produto-requisitos.component';
 
 
 @NgModule({
@@ -55,7 +55,7 @@ import { CadastroResumoComponent } from './cadastro-resumo/cadastro-resumo.compo
     CadastroProjetoComponent,
     CadastroResumoComponent,
     CadastroDetalhamentoComponent,
-    CadastroRequisitosComponent
+    CadastroProdutoRequisitosComponent,
   ],
   imports: [
     BrowserModule,

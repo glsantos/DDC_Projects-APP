@@ -8,7 +8,7 @@
 
 <div class="row">
   <div class="input-field col s12 l6 m6">
-    <i class="material-icons prefix">work</i>
+    <i class="material-icons prefix">perm_device_information</i>
     <input value="" id="txt_projeto" type="text" name="txt_nome_projeto" class="validate">
     <label for="txt_projeto">Projeto</label>
   </div>
@@ -36,12 +36,12 @@
     <i class="material-icons prefix">person</i>
     <select multiple>
       <option value="0" disabled selected>Selecione algum responsável</option>
-      <option value="1">Desenvolvimento</option>
-      <option value="2">Suporte</option>
-      <option value="3">Implantação Produto</option>
-      <option value="4">Adequação</option>
-      <option value="5">Customização</option>
-      <option value="6">Outros</option>
+      <option value="1">Responsável 1</option>
+      <option value="2">Responsável 2</option>
+      <option value="3">Responsável 3</option>
+      <option value="4">Responsável 4</option>
+      <option value="5">Responsável 5</option>
+      <option value="6">Responsável 6</option>
     </select>
     <label>Responsável ddCom</label>
   </div>
@@ -64,32 +64,67 @@
 </div>
 
 <div class="row">
+  <div class="input-field col s12 l12 m12">
+    <i class="material-icons prefix">developer_mode</i> 
+    <textarea id="txtx_custom_detalhe" class="materialize-textarea"></textarea>
+    <label for="textarea1">Detalhamento do Projeto</label>
+  </div>
+</div>
+
+<div class="row">
+
   <div class="col s12 l12 m12">
     <h4>Contatos </h4>
     <div class="divider"></div>
+
+    <div class="row">
+      <div class="container">
+        <div class="input-field col s12 l10  m6">
+            
+            <i class="material-icons prefix">person</i>
+            
+            <select multiple>
+              <option value="0" disabled selected>Selecione algum Contato</option>
+              <option value="1">Contato 1</option>
+              <option value="2">Contato 2</option>
+              <option value="3">Contato 3</option>
+              <option value="4">Contato 4</option>
+              <option value="5">Contato 5</option>
+              <option value="6">Contato 6</option>
+            </select>
+           
+            <label>Contato</label>
+            <i class="material-icons left">add</i>
+        </div>
+    </div>
+    </div>
+    
+    
+    <div class="row">
     <div class="input-field col s12 l6 m6">
       <i class="material-icons prefix">people</i>
-      <input value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
+      <input readonly value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
       <label for="txt_projeto">Nome</label>
     </div>
 
     <div class="input-field col s12 l6 m6">
       <i class="material-icons prefix">domain</i>
-      <input value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
+      <input readonly value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
       <label for="txt_projeto">Setor</label>
     </div>
 
     <div class="input-field col s12 l6 m6">
       <i class="material-icons prefix">mail</i>
-      <input value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
+      <input readonly value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">
       <label for="txt_projeto">E-mail</label>
     </div>
 
     <div class="input-field col s11 l6 m6">
       <i class="material-icons prefix">contacts</i>
-      <input value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">  
+      <input readonly value="" id="txt_projeto" type="text" name="txt_nome_contato" class="validate">  
       <a><i class="material-icons prefix">plus_one</i></a>
       <label for="txt_projeto">Telefone</label>
     </div>
+  </div>
   </div>
 </div>

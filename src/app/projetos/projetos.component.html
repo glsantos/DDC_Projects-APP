@@ -16,11 +16,11 @@
 
 <div class="container form-responsive">
   <ul class="tabs">
-    <li class="tab col s3 ">
+    <li class="tab col s3">
       <a href="#test1">Projetos</a>
     </li>
-    <li class="tab col s3 actived">
-      <a href="#test2">Novo Projeto</a>
+    <li class="tab col s3">
+      <a class="active" href="#test2">Novo Projeto</a>
     </li>
   </ul>
 <div id="test1" class="col s12">
@@ -85,8 +85,9 @@
     <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">
-        <i class="material-icons col">phonelink_setup</i>
-          Projeto
+        <i class="material-icons col">perm_device_information</i>
+        
+          Projeto e Detalhamento
       </div>
       <div class="collapsible-body">
 
@@ -96,18 +97,18 @@
     </li>
     <li>
       <div class="collapsible-header">
-        <i class="material-icons">file_copy</i>
-          Quisitos e Pré-Requisitos
+        <i class="material-icons">phonelink_setup</i>
+          Produto(s) e Pré-Requisitos
       </div>
       <div class="collapsible-body">
         <!--Colocar modulo de Requisitos de Projeto-->
-      <app-cadastro-requisitos></app-cadastro-requisitos>
+        <app-cadastro-produto-requisitos></app-cadastro-produto-requisitos>
       </div>
     </li>
     <li>
       <div class="collapsible-header">
-        <i class="material-icons">comment</i>
-          Detalhamento
+        <i class="material-icons">device_unknown</i>
+          Pontos Críticos
       </div>
       <div class="collapsible-body">
         <!--Colocar modulo de Detalhamento de Projeto-->
@@ -116,7 +117,7 @@
     </li>
     <li>
       <div class="collapsible-header">
-        <i class="material-icons">beenhere</i>
+        <i class="material-icons">mobile_friendly</i>
           Resumo
       </div>
       <div class="collapsible-body">
