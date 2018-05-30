@@ -2,11 +2,13 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';  
 import { HomeComponent } from './home/home.component';
-import { ProjetosComponent } from './projetos/projetos.component';
+import { ProjetosComponent } from './projeto/projetos/projetos.component';
 import { HorasExtrasComponent } from './horas-extras/horas-extras.component';
 import { ControleAcessoComponent } from './controle-acesso/controle-acesso.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
+
+
 
 let routes = [
     { path : "acesso", component: ControleAcessoComponent},

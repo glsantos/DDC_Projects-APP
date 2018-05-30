@@ -9,7 +9,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { MenuNavegacaoComponent } from './menu-navegacao/menu-navegacao.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { ProjetosComponent } from './projetos/projetos.component';
+import { ProjetosComponent } from './projeto/projetos/projetos.component';
 import { HorasExtrasComponent } from './horas-extras/horas-extras.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { ControleAcessoComponent } from './controle-acesso/controle-acesso.component';
@@ -25,11 +25,11 @@ import { EmpresaComponent } from './cadastros/empresa/empresa.component';
 import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
 import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
-import { CadastroProjetoComponent } from './cadastro-projeto/cadastro-projeto.component';
-import { CadastroDetalhamentoComponent } from './cadastro-detalhamento/cadastro-detalhamento.component';
-import { CadastroResumoComponent } from './cadastro-resumo/cadastro-resumo.component';
-import { CadastroProdutoRequisitosComponent } from './cadastro-produto-requisitos/cadastro-produto-requisitos.component';
 
+import {CadastroProjetoComponent} from './projeto/cadastro-projeto/cadastro-projeto.component';
+import { CadastroProdutoProjetoComponent } from './projeto/cadastro-produto-projeto/cadastro-produto-projeto.component';
+import { CadastroRequisitosProjetoComponent } from './projeto/cadastro-requisitos-projeto/cadastro-requisitos-projeto.component';
+import { CadastroResumoProjetoComponent } from './projeto/cadastro-resumo-projeto/cadastro-resumo-projeto.component';
 
 @NgModule({
   declarations: [
@@ -53,9 +53,9 @@ import { CadastroProdutoRequisitosComponent } from './cadastro-produto-requisito
     TipoDepartamentoComponent,
     ServicoAtividadesComponent,
     CadastroProjetoComponent,
-    CadastroResumoComponent,
-    CadastroDetalhamentoComponent,
-    CadastroProdutoRequisitosComponent,
+    CadastroProdutoProjetoComponent,
+    CadastroRequisitosProjetoComponent,
+    CadastroResumoProjetoComponent,
   ],
   imports: [
     BrowserModule,

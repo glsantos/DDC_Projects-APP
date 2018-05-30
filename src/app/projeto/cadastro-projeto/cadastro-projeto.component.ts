@@ -27,7 +27,6 @@ export class CadastroProjetoComponent implements OnInit {
   }
 
   private clickDate(){
-
     $('.datepicker').pickadate({
 
       monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
@@ -44,7 +43,7 @@ export class CadastroProjetoComponent implements OnInit {
       format: 'dd/mm/yyyy',
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15, // Definindo 15 anos depois do ano atual
-      closeOnSelect: false, // Fechando após selecionar a data no calendário
+      closeOnSelect: true, // Fechando após selecionar a data no calendário
       container: undefined, // ex. 'body' will append picker to body
       onClose: function() {
         $(document.activeElement).blur()

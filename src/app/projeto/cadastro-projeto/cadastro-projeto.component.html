@@ -1,0 +1,114 @@
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Serviço</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12 l7 m12">
+    <i class="material-icons prefix">perm_device_information</i>
+    <input id="txt_projeto" type="text" name="txt_nome_projeto" class="validate">
+    <label for="txt_projeto">Nome do Projeto</label>
+  </div>
+
+
+  <div class="input-field col s12 l6 m6">
+    <i class="material-icons prefix">important_devices</i>
+    <select multiple>
+      <option value="0" disabled selected>Selecione o tipo de Serviço</option>
+      <option value="1">Desenvolvimento</option>
+      <option value="2">Suporte</option>
+      <option value="3">Implantação Produto</option>
+      <option value="4">Adequação</option>
+      <option value="5">Customização</option>
+      <option value="6">Outros</option>
+    </select>
+    <label>Serviços/Projeto</label>
+  </div>
+
+  <div class="input-field col s12 l6 m6">
+    <i class="material-icons prefix">person</i>
+    <select>
+      <option value="0" disabled selected>Selecione algum responsável</option>
+      <option value="1">Responsável 1</option>
+      <option value="2">Responsável 2</option>
+      <option value="3">Responsável 3</option>
+      <option value="4">Responsável 4</option>
+      <option value="5">Responsável 5</option>
+      <option value="6">Responsável 6</option>
+    </select>
+    <label>Responsável ddCom</label>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Cliente</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s10 l6 m6">
+    <i class="material-icons prefix">location_city</i>
+    <select>
+      <option value="0" disabled selected>Selecione um Cliente</option>
+      <option value="1">Cliente 1</option>
+      <option value="2">Cliente 2</option>
+      <option value="3">Cliente 3</option>
+      <option value="4">Cliente 4</option>
+      <option value="5">Cliente 5</option>
+      <option value="6">Cliente 6</option>
+    </select>
+    <label>Cliente</label>
+  </div>
+  <div class="input-field col s10 l6 m6">
+
+    <i class="material-icons prefix">person</i>
+
+    <select multiple>
+      <option value="0" disabled selected>Selecione algum Contato</option>
+      <option value="1">Contato 1</option>
+      <option value="2">Contato 2</option>
+      <option value="3">Contato 3</option>
+      <option value="4">Contato 4</option>
+      <option value="5">Contato 5</option>
+      <option value="6">Contato 6</option>
+    </select>
+    <label>Contato</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Prazo</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6 l3 m4">
+    <i class="material-icons prefix">date_range</i>
+    <input type="text" (click)="clickDate()" class="datepicker">
+    <label for="Data de Início" data-success="">Data Inicial</label>
+  </div>
+  <div class="input-field col s6 l3 m4">
+    <i class="material-icons prefix">date_range</i>
+    <input type="text" (click)="clickDate()" class="datepicker">
+    <label for="Data de Término(Previsto)" data-success="">Data Final</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Escopo Inicial</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12 l12 m12">
+    <i class="material-icons prefix">developer_mode</i>
+    <textarea id="txtx_custom_detalhe" class="materialize-textarea"></textarea>
+    <label for="textarea1">Escopo Inicial - Aplicar Wysiwyg</label>
+  </div>
+</div>
