@@ -14,7 +14,7 @@
     
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a routerLink="projeto">Projetos</a></li>
-      <li><a routerLink="servico-atividade">Atividades</a></li>
+      <li><a routerLink="atividade">Atividades</a></li>
       <li><a routerLink="horas-extras">Horas Extras</a></li>
       <li><a routerLink="relatorio">Relatórios</a></li>
       <li><a class="dropdown-button" (click)="interageMenu()" data-activates="dropdown1">Cadastros<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -32,9 +32,10 @@
         <li><a class="waves-effect">Tipos de Departamentos</a></li>
       </ul>   
     </ul>
+    <!--Menu Mobile-Esqueleto-->
     <ul class="side-nav" id="mobile-demo">
-      <li><a routerLink="projeto">Projetos</a></li>
-      <li><a>Atividades</a></li>
+      <li><a >Projetos</a></li>
+      <li><a >Atividades</a></li>
       <li><a>Horas Extras</a></li>
       <li><a>Relatórios</a></li>
       <li><a>Cadastros</a></li>
@@ -42,6 +43,7 @@
   </div>
 </nav>
 
+<!--Menu Mobile-->
 <ul id="slide-out" class="side-nav">
   <li><div class="user-view">
     <div class="background">
@@ -54,7 +56,7 @@
   <ul data-activates="slide-out" (click)="esconderSideNav">
   <li><a class="waves-effect" routerLink="projeto"><i class="material-icons">work</i>Projetos</a></li>
   
-  <li><a class="waves-effect" routerLink="servico-atividade"><i class="material-icons">description</i>Atividades</a></li>
+  <li><a class="waves-effect" routerLink="atividade"><i class="material-icons">description</i>Atividades</a></li>
   <li><a class="waves-effect" routerLink="horas-extras"><i class="material-icons">watch_later</i>Horas Extras</a></li>
   <li><a class="waves-effect" routerLink="relatorio"><i class="material-icons">folder</i>Relatórios</a></li>
   <li><a class="dropdown-button" data-activates="dropdown1"><i class="material-icons">create_new_folder</i>Cadastros<i class="material-icons right">arrow_drop_down</i></a></li>

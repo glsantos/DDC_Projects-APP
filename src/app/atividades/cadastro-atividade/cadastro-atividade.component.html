@@ -1,0 +1,151 @@
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons col">av_timer</i>
+            Registrar Atividade
+          </div>
+          <div class="collapsible-body">
+            <div class="form-responsive">
+              <div class="row">
+                <div class="col s12 l12 m12">
+                  <h4 class="center-align">Atividade</h4>
+                  <div class="divider"></div>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="input-field col s12 l12 m12">
+                  <i class="material-icons prefix">important_devices</i>
+                  <select multiple>
+                    <option value="0" disabled selected>Selecione a Atividade</option>
+                    <option value="1">Desenvolvimento</option>
+                    <option value="2">Reunião</option>
+                    <option value="3">Visita Cliente</option>
+                    <option value="4">Outros</option>
+                  </select>
+                </div>
+
+                <div class="input-field col s12 l12 m12">
+                  <i class="material-icons prefix">important_devices</i>
+                  <select>
+                    <option value="0" disabled selected>Selecione o Projeto</option>
+                    <option value="1">Projeto X</option>
+                    <option value="2">Projeto P</option>
+                    <option value="3">Projeto T</option>
+                    <option value="4">Projeto O</option>
+                  </select>
+                </div>
+
+                <div class="col s12 l12 m12">
+                  <h6 class="left-align">Início (Data e Hora)</h6>
+                  <div class="divider"></div>
+                </div>
+                <div class="input-field col s6 l3 m4">
+                  <i class="material-icons prefix">date_range</i>
+                  <input id="dt_inicial" type="text" (click)="clickDate()" class="datepicker">
+                  <label for="dt_inicial" data-success="">Data</label>
+                </div>
+                <div class="input-field col s6 l3 m4">
+                  <i class="material-icons prefix">access_time</i>
+                  <input id="hr_inicial" type="text" class="timepicker active">
+                  <label for="hr_inicial" data-success="">Hora</label>
+                </div>
+
+
+                <div class="col s12 l12 m12">
+                  <h6 class="left-align">Final (Date e Hora)</h6>
+                  <div class="divider"></div>
+                </div>
+                <div class="input-field col s6 l3 m4">
+                  <i class="material-icons prefix">date_range</i>
+                  <input type="text" (click)="clickDate()" class="datepicker">
+                  <label for="Data de Término(Previsto)" data-success="">Fim</label>
+                </div>
+                <div class="input-field col s6 l3 m4">
+                  <i class="material-icons prefix">access_time</i>
+                  <input id="hr_final" type="text" class="timepicker" readonly>
+                  <label for="hr_final">Hora</label>
+                </div>
+
+                <div class="col s12 l12 m12">
+                  <h6 class="left-align">Descrição</h6>
+                  <div class="divider"></div>
+                </div>
+                <div class="input-field col s12 l12 m12">
+                  <label for="textarea1">Aplicar Wysiwyg</label>
+                  <textarea id="txtx_custom_detalhe" class="materialize-textarea"></textarea>
+
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                  Confirmar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header active">
+            <i class="material-icons col">timeline</i>
+            Minhas Atividades
+          </div>
+          <div class="collapsible-body">
+            <div class="row">
+              <div class="input-field col s12 red-text">
+                <i class="red-text material-icons prefix">search</i>
+                <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+              </div>
+              <div class="col s12 l12 m12">
+                <table class="responsive-table bordered striped centered highlight">
+                  <thead>
+                    <th>Data</th>
+                    <th>Projeto</th>
+                    <th>Atividade</th>
+                    <th>Detalhes</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01/06/2018</td>
+                      <td>Xpto Project</td>
+                      <td>Desenvolvimento</td>
+                      <td class="centered">
+                        <a class="modal-trigger" href="#modal1">
+                          <i class="material-icons">remove_red_eye</i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>31/05/2018</td>
+                      <td>Otpx Project</td>
+                      <td>Reunião</td>
+                      <td class="centered">
+                        <a class="modal-trigger" href="#modal1">
+                          <i class="material-icons">remove_red_eye</i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>30/05/2018</td>
+                      <td>Pxot Project</td>
+                      <td>Suporte</td>
+                      <td class="centered">
+                        <a class="modal-trigger" href="#modal1">
+                          <i class="material-icons">remove_red_eye</i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

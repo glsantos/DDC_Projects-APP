@@ -4,18 +4,16 @@ declare var $: any;
 declare var JQuery: any;
 
 @Component({
-  selector: 'app-cadastro-projeto',
-  templateUrl: './cadastro-projeto.component.html',
-  styleUrls: ['./cadastro-projeto.component.css']
+  selector: 'app-cadastro-atividade',
+  templateUrl: './cadastro-atividade.component.html',
+  styleUrls: ['./cadastro-atividade.component.css']
 })
-export class CadastroProjetoComponent implements OnInit {
+export class CadastroAtividadeComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
 
-
-    $('.modal').modal();
     $('select').material_select();
     $('ul.tabs').tabs(); 
 
@@ -39,12 +37,17 @@ export class CadastroProjetoComponent implements OnInit {
       selectYears: 15, // Definindo 15 anos depois do ano atual
       closeOnSelect: true, // Fechando após selecionar a data no calendário
       container: undefined, // ex. 'body' will append picker to body
+      DefaultDate: '14/07/2017'
+    });
+
+    $('.timepicker').pickatime({
+      default: 'now',
+      twelvehour: false, // change to 12 hour AM/PM clock from 24 hour
+      donetext: 'Pronto',
+      cleartext:  'Limpar',
+      autoclose: true,
+      vibrate: true // vibrate the device when dragging clock hand
     });
   }
 
-  private pegaDado(){
-
-    var nome = $("[name=txt_nome_projeto]").val();
-    alert(nome);
-  }
 }

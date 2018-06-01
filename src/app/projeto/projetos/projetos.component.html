@@ -1,9 +1,10 @@
 <!--App do modal-->
 <!--Modal-->
+
 <div id="modal1" class="modal">
   <div class="modal-content">
 
-    <app-cadastro-projeto></app-cadastro-projeto>
+    a
 
   </div>
   <div class="modal-footer">
@@ -24,69 +25,50 @@
     </li>
   </ul>
   <div id="test1" class="col s12">
-
-    <div class="input-field col s6 s12 red-text">
-      <i class="red-text material-icons prefix">search</i>
-      <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+    <div class="card">
+      <div class="input-field col s6 s12 red-text">
+        <i class="red-text material-icons prefix">search</i>
+        <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+      </div>
+      <table class="responsive-table bordered striped centered highlight">
+        <thead>
+          <tr>
+            <th>Cód.</th>
+            <th>Projeto</th>
+            <th>Produto</th>
+            <th>Cliente</th>
+            <th>Início</th>
+            <th>Previsão</th>
+            <th>Detalhes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Projeto KeyStone</td>
+            <td>KeyStone</td>
+            <td>Condomínio X</td>
+            <td>11/05/2018</td>
+            <td>23/12/2018</td>
+            <td class="centered">
+              <a class="modal-trigger" href="#modal1">
+                <i class="material-icons">remove_red_eye</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <table class="responsive-table bordered striped centered highlight">
-      <thead>
-        <tr>
-          <th>Cód.</th>
-          <th>Projeto</th>
-          <th>Produto</th>
-          <th>Cliente</th>
-          <th>Início</th>
-          <th>Previsão</th>
-          <th>Detalhes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>001</td>
-          <td>Projeto KeyStone</td>
-          <td>KeyStone</td>
-          <td>Condomínio X</td>
-          <td>11/05/2018</td>
-          <td>23/12/2018</td>
-          <td class="centered">
-            <a class="modal-trigger" href="#modal1">
-              <i class="material-icons">remove_red_eye</i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Gerenciar Documentos e Atividades</td>
-          <td>DDC Projects</td>
-          <td>ddCom Systems</td>
-          <td>14/05/2018</td>
-          <td>25/12/2018</td>
-          <td class="centered">
-            <i class="material-icons">remove_red_eye</i>
-          </td>
-        </tr>
-        <tr>
-          <td>120</td>
-          <td>Projeto Mercury</td>
-          <td>Mercury Modificado</td>
-          <td>Atento</td>
-          <td>19/03/2018</td>
-          <td>27/08/2018</td>
-          <td class="centered">
-            <i class="material-icons">remove_red_eye</i>
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>
+
+
   <div id="test2" class="col s12">
 
     <ul class="collapsible" data-collapsible="accordion">
 
       <!--1º Passo-->
       <li>
-        <div class="collapsible-header">
+        <div class="collapsible-header active">
           <i class="material-icons col">perm_device_information</i>
 
           Projeto
@@ -138,3 +120,4 @@
       </li>
     </ul>
   </div>
+</div>

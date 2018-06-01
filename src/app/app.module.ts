@@ -24,12 +24,12 @@ import { ProfissionalComponent } from './cadastros/profissional/profissional.com
 import { EmpresaComponent } from './cadastros/empresa/empresa.component';
 import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
 import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
-import { ServicoAtividadesComponent } from './servico-atividades/servico-atividades.component';
 
 import {CadastroProjetoComponent} from './projeto/cadastro-projeto/cadastro-projeto.component';
 import { CadastroProdutoProjetoComponent } from './projeto/cadastro-produto-projeto/cadastro-produto-projeto.component';
 import { CadastroRequisitosProjetoComponent } from './projeto/cadastro-requisitos-projeto/cadastro-requisitos-projeto.component';
 import { CadastroResumoProjetoComponent } from './projeto/cadastro-resumo-projeto/cadastro-resumo-projeto.component';
+import { CadastroAtividadeComponent } from './atividades/cadastro-atividade/cadastro-atividade.component';
 
 @NgModule({
   declarations: [
@@ -51,11 +51,11 @@ import { CadastroResumoProjetoComponent } from './projeto/cadastro-resumo-projet
     EmpresaComponent,
     DepartamentoComponent,
     TipoDepartamentoComponent,
-    ServicoAtividadesComponent,
     CadastroProjetoComponent,
     CadastroProdutoProjetoComponent,
     CadastroRequisitosProjetoComponent,
     CadastroResumoProjetoComponent,
+    CadastroAtividadeComponent,
   ],
   imports: [
     BrowserModule,
