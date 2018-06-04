@@ -16,6 +16,11 @@ export class CadastroAtividadeComponent implements OnInit {
 
     $('select').material_select();
     $('ul.tabs').tabs(); 
+    $('.collapsible').collapsible();
+
+    $('#txt_atividade').froalaEditor({
+      placeholderText: 'Descreva a atividade/tarefa...'
+    });
 
     $('.datepicker').pickadate({
 

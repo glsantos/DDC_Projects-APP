@@ -15,9 +15,7 @@ export class MenuNavegacaoComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {}
-
-  private interageMenu(){
+  ngOnInit() {
 
     $('.dropdown-button').dropdown('open');
   }

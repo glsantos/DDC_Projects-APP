@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MaterializeModule } from 'angular2-materialize';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+
 import { MenuNavegacaoComponent } from './menu-navegacao/menu-navegacao.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -30,6 +32,8 @@ import { CadastroProdutoProjetoComponent } from './projeto/cadastro-produto-proj
 import { CadastroRequisitosProjetoComponent } from './projeto/cadastro-requisitos-projeto/cadastro-requisitos-projeto.component';
 import { CadastroResumoProjetoComponent } from './projeto/cadastro-resumo-projeto/cadastro-resumo-projeto.component';
 import { CadastroAtividadeComponent } from './atividades/cadastro-atividade/cadastro-atividade.component';
+import { HistoricoAtividadeComponent } from './atividades/historico-atividade/historico-atividade.component';
+import { AtividadeComponent } from './atividades/atividade/atividade.component';
 
 @NgModule({
   declarations: [
@@ -56,10 +60,14 @@ import { CadastroAtividadeComponent } from './atividades/cadastro-atividade/cada
     CadastroRequisitosProjetoComponent,
     CadastroResumoProjetoComponent,
     CadastroAtividadeComponent,
+    HistoricoAtividadeComponent,
+    AtividadeComponent,
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

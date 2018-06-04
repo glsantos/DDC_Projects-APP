@@ -40,6 +40,10 @@ export class CadastroProjetoComponent implements OnInit {
       closeOnSelect: true, // Fechando após selecionar a data no calendário
       container: undefined, // ex. 'body' will append picker to body
     });
+
+    $('#txt_escopoInicial').froalaEditor({
+      placeholderText: 'Escreva aqui o Escopo Inicial do Projeto...'
+    });
   }
 
   private pegaDado(){
