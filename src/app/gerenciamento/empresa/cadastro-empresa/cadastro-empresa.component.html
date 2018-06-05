@@ -1,0 +1,83 @@
+<div class="form-responsive">
+  <div class="row">
+    <div class="col s12 l12 m12">
+      <h4 class="center-align">Cliente{{nomeFantasia}}</h4>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="switch">
+      <label>
+        Off
+        <input type="checkbox">
+        <span class="lever"></span>
+        On
+      </label>
+    </div>
+
+    <div class="input-field col s12 offset-l2 l8 m12">
+      <i class="material-icons prefix">location_city</i>
+      <input type="text" id="nomeFantasia">
+      <label for="nomeFantasia">Nome Fantasia</label>
+    </div>
+
+    <div class="input-field col s12 offset-l2 l8 m12">
+      <i class="material-icons prefix">business</i>
+      <input type="text" id="razaoSocial">
+      <label for="razaoSocial">Razão Social</label>
+    </div>
+    
+    <div class="col s12 offset-l7 offset-m7">
+
+      <a class="btn waves-effect waves-light">Contato(s)
+          <i class="material-icons left">add</i></a>
+    </div>
+
+    <div class="col s12 offset-l2 l8 m12">
+      <h6 class="left-align">Localização</h6>
+      <div class="divider"></div>
+    </div>
+    <div class="input-field col s6 offset-l2 l3 m4">
+      <i class="material-icons prefix">my_location</i>
+      <input id="cepEmpresa" type="text" class="timepicker active">
+      <label for="cepEmpresa" data-success="">CEP</label>
+    </div>
+    <div class="input-field col s9 offset-l2 l7 m6">
+      <i class="material-icons prefix">location_on</i>
+      <input type="text" value="Av. Copacabana" readonly>
+      <label for="logradouroEmpresa">Logradouro</label>
+    </div>
+    <div class="input-field col s3 l1 m2">
+      <input type="text" id="numeroEmpresa">
+      <label for="numeroEmpresa">nº</label>
+    </div>
+    <div class="input-field col s12 offset-l2 l4 m6">
+      <i class="material-icons prefix">location_on</i>
+      <input type="text" for="complementoEmpresa">
+      <label for="complementoEmpresa">Complemento</label>
+    </div>
+    <div class="input-field col s12 l4 m6">
+      <i class="material-icons prefix">location_on</i>
+      <input type="text" value="Empresarial 18 do Forte" readonly>
+      <label for="logradouroEmpresa">Bairro</label>
+    </div>
+    <div class="input-field col s9 offset-l2 l4 m6">
+      <i class="material-icons prefix">location_on</i>
+      <input type="text" value="Barueri" readonly>
+      <label for="logradouroEmpresa">Cidade</label>
+    </div>
+    <div class="input-field col s3 l1 m1">
+      <input type="text" value="PB" readonly>
+      <label for="logradouroEmpresa">UF</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-l7 offset-m7">
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        Confirmar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>

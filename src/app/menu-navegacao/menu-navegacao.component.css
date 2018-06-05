@@ -1,3 +1,18 @@
 nav{
     background-color:#d11d32 ;
 }
+.dd-color{
+    color:#d11d32;
+}
+
+.dd-background{
+    background-color:#d11d32;
+}
+
+.dd-black{
+    color: #000;
+}
+
+.dd-white{
+    color:#fff;
+}

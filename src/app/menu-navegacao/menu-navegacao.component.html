@@ -1,32 +1,57 @@
 <ul id="dropdown-mob-relatorios" class="dropdown-content">
   <li>
-    <a>Custos</a>
+    <a>
+      <i class="material-icons left">error</i>Sem Relatórios</a>
   </li>
 </ul>
 
 <ul id="dropdown-diversos" class="dropdown-content">
   <li>
-    <a>Produtos & Aplicativos</a>
+    <a routerLink="departamento" class="dd-color">
+      <i class="material-icons prefix dd-black">domain</i>Departamentos</a>
   </li>
-  <li class="divider"></li>
   <li>
-    <a>Empresas & Contatos</a>
-  </li>
-  <li class="divider"></li>
-  <li>
-    <a>Profissionais & Usuários</a>
+    <a routerLink="setor" class="dd-color">
+      <i class="material-icons prefix dd-black">device_hub</i>Setores</a>
   </li>
 
   <li class="divider"></li>
   <li>
-    <a>Departamentos & Setores</a>
+    <a routerLink="empresa" class="dd-color">
+      <i class="material-icons prefix dd-black">business_center</i>Empresas</a>
+  </li>
+  <li>
+    <a routerLink="contato" class="dd-color">
+      <i class="material-icons prefix dd-black">contacts</i>Contatos</a>
   </li>
 
   <li class="divider"></li>
+
   <li>
-    <a>Segurança</a>
+    <a routerLink="produto" class="dd-color">
+      <i class="material-icons prefix dd-black">phonelink_setup</i> Produtos</a>
+  </li>
+  <li>
+    <a routerLink="apps" class="dd-color">
+      <i class="material-icons prefix dd-black">add_to_home_screen</i>Aplicativos</a>
+  </li>
+
+  <li class="divider"></li>
+
+  <li>
+    <a routerLink="profissional" class="dd-color">
+      <i class="material-icons prefix dd-black">supervised_user_circle</i>Profissionais</a>
+  </li>
+  <li>
+    <a routerLink="usuario" class="dd-color">
+      <i class="material-icons prefix dd-black">supervisor_account</i>Usuários</a>
+  </li>
+  <li>
+    <a routerLink="permissao" class="dd-color">
+      <i class="material-icons prefix dd-black">security</i>Permissões</a>
   </li>
 </ul>
+
 
 <nav class="nav-extended">
   <div class="nav-wrapper">
@@ -37,34 +62,87 @@
       <i class="material-icons">menu</i>
     </a>
 
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <ul class="right hide-on-med-and-down">
       <li>
         <a routerLink="projeto">
-          <i class="material-icons left">perm_device_information</i>Projetos</a>
+          <i class="material-icons left">devices</i>Projetos</a>
       </li>
       <li>
         <a routerLink="atividade">
-          <i class="material-icons left">spellcheck</i>
+          <i class="material-icons left">assignment_turned_in</i>
           Atividades
         </a>
       </li>
       <li>
-        <a class="dropdown-button" data-activates="dropdown-mob-relatorios">
+        <a class="dropdown-button" data-activates="dropdown-mob-relatorio">
           <i class="material-icons left">assignment</i>
           Relatórios
           <i class="material-icons right">arrow_drop_down</i>
         </a>
       </li>
+      <ul id="dropdown-mob-relatorio" class="dropdown-content">
+        <li>
+          <a>
+            <i class="material-icons left">error</i>Sem Relatórios</a>
+        </li>
+      </ul>
       <li>
-        <a class="dropdown-button" data-activates="dropdown-diversos">
-          <i class="material-icons left">assignment</i>
+        <a class="dropdown-button" data-activates="dropdown-diverso">
+          <i class="material-icons left">settings</i>
           Gerenciamento
           <i class="material-icons right">arrow_drop_down</i>
         </a>
       </li>
+      <ul id="dropdown-diverso" class="dropdown-content">
+        <li>
+          <a routerLink="departamento" class="dd-color">
+            <i class="material-icons prefix dd-black">domain</i>Departamentos</a>
+        </li>
+        <li>
+          <a routerLink="setor" class="dd-color">
+            <i class="material-icons prefix dd-black">device_hub</i>Setores</a>
+        </li>
+
+        <li class="divider"></li>
+        <li>
+          <a routerLink="empresa" class="dd-color">
+            <i class="material-icons prefix dd-black">business_center</i>Empresas</a>
+        </li>
+        <li>
+          <a routerLink="contato" class="dd-color">
+            <i class="material-icons prefix dd-black">contacts</i>Contatos</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li>
+          <a routerLink="produto" class="dd-color">
+            <i class="material-icons prefix dd-black">phonelink_setup</i> Produtos</a>
+        </li>
+        <li>
+          <a routerLink="apps" class="dd-color">
+            <i class="material-icons prefix dd-black">add_to_home_screen</i>Aplicativos</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li>
+          <a routerLink="profissional" class="dd-color">
+            <i class="material-icons prefix dd-black">supervised_user_circle</i>Profissionais</a>
+        </li>
+        <li>
+          <a routerLink="usuario" class="dd-color">
+            <i class="material-icons prefix dd-black">supervisor_account</i>Usuários</a>
+        </li>
+        <li>
+          <a routerLink="permissao" class="dd-color">
+            <i class="material-icons prefix dd-black">security</i>Permissões</a>
+        </li>
+      </ul>
     </ul>
   </div>
 </nav>
+
 
 <!--Menu Mobile-->
 <ul id="slide-out" class="side-nav">
@@ -86,16 +164,22 @@
   </li>
   <ul data-activates="slide-out" (click)="esconderSideNav">
     <li>
-      <a class="waves-effect" routerLink="projeto">
-        <i class="material-icons">work</i>Projetos</a>
+      <a class="waves-effect dd-color" routerLink="projeto">
+        <i class="material-icons dd-black">work</i>Projetos</a>
     </li>
     <li>
       <a class="waves-effect" routerLink="atividade">
         <i class="material-icons">description</i>Atividades</a>
     </li>
     <li>
-      <a class="dropdown-button" data-activates="dropdown-mob-relatorio">
-        <i class="material-icons">folder</i>Relatórios
+      <a class="dropdown-button" data-activates="dropdown-mob-relatorios">
+        <i class="material-icons">create_new_folder</i>Relatórios
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-button" data-activates="dropdown-diversos">
+        <i class="material-icons">folder</i>Gerenciar
         <i class="material-icons right">arrow_drop_down</i>
       </a>
     </li>

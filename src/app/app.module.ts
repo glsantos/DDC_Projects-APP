@@ -11,29 +11,32 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { MenuNavegacaoComponent } from './menu-navegacao/menu-navegacao.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { ProjetosComponent } from './projeto/projetos/projetos.component';
-import { HorasExtrasComponent } from './horas-extras/horas-extras.component';
+import { ProjetosComponent } from './projetos/projetos.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
-import { ControleAcessoComponent } from './controle-acesso/controle-acesso.component';
-import { UsuarioComponent } from './cadastros/usuario/usuario.component';
-import { PerfilUsuarioComponent } from './cadastros/perfil-usuario/perfil-usuario.component';
-import { ContatoComponent } from './cadastros/contato/contato.component';
-import { TipoAplicativoComponent } from './cadastros/tipo-aplicativo/tipo-aplicativo.component';
-import { ProdutoComponent } from './cadastros/produto/produto.component';
-import { SetorComponent } from './cadastros/setor/setor.component';
-import { FuncaoComponent } from './cadastros/funcao/funcao.component';
-import { ProfissionalComponent } from './cadastros/profissional/profissional.component';
-import { EmpresaComponent } from './cadastros/empresa/empresa.component';
-import { DepartamentoComponent } from './cadastros/departamento/departamento.component';
-import { TipoDepartamentoComponent } from './cadastros/tipo-departamento/tipo-departamento.component';
+import { UsuarioComponent } from './gerenciamento/usuario/usuario.component';
+import { PerfilUsuarioComponent } from './gerenciamento/usuario/perfil-usuario/perfil-usuario.component';
+import { ContatoComponent } from './gerenciamento/contato/contato.component';
+import { TipoAplicativoComponent } from './gerenciamento/aplicativo/tipo-aplicativo/tipo-aplicativo.component';
+import { ProdutoComponent } from './gerenciamento/produto/produto.component';
+import { SetorComponent } from './gerenciamento/setor/setor.component';
+import { FuncaoComponent } from './gerenciamento/funcao/funcao.component';
+import { ProfissionalComponent } from './gerenciamento/profissional/profissional.component';
+import { EmpresaComponent } from './gerenciamento/empresa/empresa.component';
+import { DepartamentoComponent } from './gerenciamento/departamento/departamento.component';
+import {CadastroProjetoComponent} from './projetos/cadastro-projeto/cadastro-projeto.component';
+import { CadastroProdutoProjetoComponent } from './projetos/cadastro-produto-projeto/cadastro-produto-projeto.component';
+import { CadastroRequisitosProjetoComponent } from './projetos/cadastro-requisitos-projeto/cadastro-requisitos-projeto.component';
+import { CadastroResumoProjetoComponent } from './projetos/cadastro-resumo-projeto/cadastro-resumo-projeto.component';
+import { CadastroAtividadeComponent } from './atividade/cadastro-atividade/cadastro-atividade.component';
+import { HistoricoAtividadeComponent } from './atividade/historico-atividade/historico-atividade.component';
+import { AtividadeComponent } from './atividade/atividade.component';
+import { AplicativoComponent } from './gerenciamento/aplicativo/aplicativo.component';
+import { StatusProjetoComponent } from './gerenciamento/status-projeto/status-projeto.component';
+import { FasesProjetoComponent } from './gerenciamento/fases-projeto/fases-projeto.component';
+import { PermissaoComponent } from './gerenciamento/permissao/permissao.component';
+import { CadastroEmpresaComponent } from './gerenciamento/empresa/cadastro-empresa/cadastro-empresa.component';
+import { ConsultaEmpresaComponent } from './gerenciamento/empresa/consulta-empresa/consulta-empresa.component';
 
-import {CadastroProjetoComponent} from './projeto/cadastro-projeto/cadastro-projeto.component';
-import { CadastroProdutoProjetoComponent } from './projeto/cadastro-produto-projeto/cadastro-produto-projeto.component';
-import { CadastroRequisitosProjetoComponent } from './projeto/cadastro-requisitos-projeto/cadastro-requisitos-projeto.component';
-import { CadastroResumoProjetoComponent } from './projeto/cadastro-resumo-projeto/cadastro-resumo-projeto.component';
-import { CadastroAtividadeComponent } from './atividades/cadastro-atividade/cadastro-atividade.component';
-import { HistoricoAtividadeComponent } from './atividades/historico-atividade/historico-atividade.component';
-import { AtividadeComponent } from './atividades/atividade/atividade.component';
 
 @NgModule({
   declarations: [
@@ -41,9 +44,7 @@ import { AtividadeComponent } from './atividades/atividade/atividade.component';
     MenuNavegacaoComponent,
     HomeComponent,
     ProjetosComponent,
-    HorasExtrasComponent,
     RelatoriosComponent,
-    ControleAcessoComponent,
     UsuarioComponent,
     PerfilUsuarioComponent,
     ContatoComponent,
@@ -54,7 +55,6 @@ import { AtividadeComponent } from './atividades/atividade/atividade.component';
     ProfissionalComponent,
     EmpresaComponent,
     DepartamentoComponent,
-    TipoDepartamentoComponent,
     CadastroProjetoComponent,
     CadastroProdutoProjetoComponent,
     CadastroRequisitosProjetoComponent,
@@ -62,6 +62,12 @@ import { AtividadeComponent } from './atividades/atividade/atividade.component';
     CadastroAtividadeComponent,
     HistoricoAtividadeComponent,
     AtividadeComponent,
+    AplicativoComponent,
+    StatusProjetoComponent,
+    FasesProjetoComponent,
+    PermissaoComponent,
+    CadastroEmpresaComponent,
+    ConsultaEmpresaComponent,
   ],
   imports: [
     BrowserModule,
