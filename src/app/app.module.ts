@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MaterializeModule } from 'angular2-materialize';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { BrMasker4Module } from 'brmasker4';
 
 import { MenuNavegacaoComponent } from './menu-navegacao/menu-navegacao.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -77,6 +78,7 @@ import { ConsultaEmpresaComponent } from './gerenciamento/empresa/consulta-empre
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrMasker4Module,
   ],
   providers: [],
   bootstrap: [AppComponent]

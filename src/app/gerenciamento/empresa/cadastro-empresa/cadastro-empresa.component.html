@@ -1,3 +1,75 @@
+<!--
+  Modal ADD Contatos
+-->
+<div id="modalAddContatos" class="modal">
+  <div class="modal-content">
+    <div class="row">
+
+      <div class="col s12 l12 m12">
+        <h4 class="center-align">Contatos</h4>
+        
+      </div>
+
+
+        <div class="col s12 l12 m12">
+          <h6 class="left-align">Contato</h6>
+          <div class="divider"></div>
+        </div>
+        <div class="input-field col s12 l3 m6">
+          <i class="material-icons prefix">account_box</i>
+          <input id="txt_nome_contato" type="text" name="txt_nome_contato">
+          <label for="txt_nome_contato">Nome</label>
+        </div>
+
+        <div class="col s12 l12 m12">
+          <h6 class="left-align">Correio Eletrônico/Vídeo-Chamada</h6>
+          <div class="divider"></div>
+        </div>
+        <div class="input-field col s12 l3 m3">
+          <i class="material-icons prefix">mail</i>
+          <input id="txt_email_contato" type="email" class="validate" name="txt_email_contato">
+          <label for="txt_email_contato">E-mail</label>
+        </div>
+        <div class="input-field col s12 l3 m3">
+          <i class="material-icons prefix">videocam</i>
+          <input id="txt_email_contato" type="text" name="txt_email_contato">
+          <label for="txt_email_contato">Skype</label>
+        </div>
+
+        <div class="col s12 l12 m12">
+          <h6 class="left-align">Telefonia</h6>
+          <div class="divider"></div>
+        </div>
+        <div class="input-field col s12 l3 m3">
+          <i class="material-icons prefix">smartphone</i>
+          <div [brmasker]="{mask:'(00) 00000-0000', len:15}" class="chips chips-placeholder"></div>
+          <label for="txt_telefone_contato">Whatsapp (DDD*Numero)</label>
+        </div>
+
+        <div class="input-field col s12 l3 m3">
+          <i class="material-icons prefix">contact_phone</i>
+          <div id="txt_telefone_contato" [brmasker]="{mask:'(00) 0000-0000 - 0000000000000', len:30}" class="chips chips-placeholder"></div>
+          <label for="txt_telefone_contato">Fixos (DDD* Número* Ramal)</label>
+        </div>
+
+      <div class="col s12 l12 m12">
+
+        <button (click)="pegaTelefonesChips()" class="btn-floating right modal-close waves-effect waves-light padrao-background"
+          type="submit" name="btn_enviarProjeto">
+          <i class="material-icons">person_add</i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--
+  Cadastro de Empresas
+-->
+
 <div class="form-responsive">
   <div class="row">
     <div class="col s12 l12 m12">
@@ -6,15 +78,6 @@
     </div>
   </div>
   <div class="row">
-
-    <div class="switch">
-      <label>
-        Off
-        <input type="checkbox">
-        <span class="lever"></span>
-        On
-      </label>
-    </div>
 
     <div class="input-field col s12 offset-l2 l8 m12">
       <i class="material-icons prefix">location_city</i>
@@ -27,11 +90,12 @@
       <input type="text" id="razaoSocial">
       <label for="razaoSocial">Razão Social</label>
     </div>
-    
-    <div class="col s12 offset-l7 offset-m7">
 
-      <a class="btn waves-effect waves-light">Contato(s)
-          <i class="material-icons left">add</i></a>
+    <div class="col s12 offset-l7 offset-m7">
+      <a class="btn waves-effect waves-light modal-trigger" href="#modalAddContatos">
+        Contato(s)
+        <i class="material-icons left">add</i>
+      </a>
     </div>
 
     <div class="col s12 offset-l2 l8 m12">
@@ -40,37 +104,41 @@
     </div>
     <div class="input-field col s6 offset-l2 l3 m4">
       <i class="material-icons prefix">my_location</i>
-      <input id="cepEmpresa" type="text" class="timepicker active">
-      <label for="cepEmpresa" data-success="">CEP</label>
+      <input [brmasker]="{mask:'00000-000', len:9}" (blur)="onBlurResgataCep()" id="cepEmpresa" type="text">
+      <label for="cepEmpresa" data-error="wrong" data-success="right">CEP</label>
     </div>
-    <div class="input-field col s9 offset-l2 l7 m6">
+
+
+    <div class="input-field col s9 l4 m6">
       <i class="material-icons prefix">location_on</i>
-      <input type="text" value="Av. Copacabana" readonly>
-      <label for="logradouroEmpresa">Logradouro</label>
+      <input type="text" placeholder=" " id="cidadeEmpresa" value="" readonly>
+      <label for="cidadeEmpresa">Cidade</label>
     </div>
     <div class="input-field col s3 l1 m2">
-      <input type="text" id="numeroEmpresa">
-      <label for="numeroEmpresa">nº</label>
+      <input type="text" placeholder=" " id="ufEmpresa" value="" readonly>
+      <label for="ufEmpresa">UF</label>
     </div>
     <div class="input-field col s12 offset-l2 l4 m6">
       <i class="material-icons prefix">location_on</i>
+      <input type="text" placeholder=" " id="bairroEmpresa" value="" readonly>
+      <label for="bairroEmpresa">Bairro</label>
+    </div>
+
+    <div class="input-field col s12 l4 m6">
+      <i class="material-icons prefix">location_on</i>
+      <input type="text" value=" " id="logradouroEmpresa" readonly>
+      <label for="logradouroEmpresa">Logradouro</label>
+    </div>
+    <div class="input-field col s5 offset-l2 l3 m4">
+      <i class="material-icons prefix">edit_location</i>
+      <input type="text" id="numeroEmpresa">
+      <label for="numeroEmpresa">nº</label>
+    </div>
+    <div class="input-field col s7 l5 m8">
       <input type="text" for="complementoEmpresa">
       <label for="complementoEmpresa">Complemento</label>
     </div>
-    <div class="input-field col s12 l4 m6">
-      <i class="material-icons prefix">location_on</i>
-      <input type="text" value="Empresarial 18 do Forte" readonly>
-      <label for="logradouroEmpresa">Bairro</label>
-    </div>
-    <div class="input-field col s9 offset-l2 l4 m6">
-      <i class="material-icons prefix">location_on</i>
-      <input type="text" value="Barueri" readonly>
-      <label for="logradouroEmpresa">Cidade</label>
-    </div>
-    <div class="input-field col s3 l1 m1">
-      <input type="text" value="PB" readonly>
-      <label for="logradouroEmpresa">UF</label>
-    </div>
+
   </div>
   <div class="row">
     <div class="col s12 offset-l7 offset-m7">
