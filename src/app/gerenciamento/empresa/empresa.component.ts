@@ -9,7 +9,11 @@ export class EmpresaComponent implements OnInit {
 
   constructor() { }
 
+
+  title = 'interprise';
   ngOnInit() {
+
+    
   }
 
 }

@@ -12,20 +12,10 @@ declare var closeOnClick: any;
 })
 export class ProjetosComponent implements OnInit {
 
-
-  editorConfig = {
-    editable: true,
-    spellcheck: false,
-    height: '10rem',
-    minHeight: '5rem',
-    placeholder: 'Type something. Test the Editor... ヽ(^。^)丿',
-    translate: 'no'
-  };
-
   constructor() { }
   
   ngOnInit() {
-    
+
     $('select').material_select();
     $('.collapsible').collapsible();
     

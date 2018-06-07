@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 declare var $: any;
 declare var JQuery: any;
 
@@ -14,6 +16,7 @@ export class CadastroProjetoComponent implements OnInit {
 
   ngOnInit() {
 
+    
 
     $('.modal').modal();
     $('select').material_select();

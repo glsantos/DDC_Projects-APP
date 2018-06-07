@@ -24,6 +24,8 @@ export class CadastroEmpresaComponent implements OnInit {
     $('.modal').modal();
     $('.collapsible').collapsible();
 
+    //Materialize.updateTextFields();
+
     $('.chips-placeholder').material_chip({
 
       secondaryPlaceholder: '+Número',

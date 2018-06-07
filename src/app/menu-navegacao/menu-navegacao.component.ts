@@ -11,8 +11,6 @@ declare var closeOnClick: any;
 })
 export class MenuNavegacaoComponent implements OnInit {
 
-  title = 'DDC Projects';
-  
   constructor() { }
 
   ngOnInit() {

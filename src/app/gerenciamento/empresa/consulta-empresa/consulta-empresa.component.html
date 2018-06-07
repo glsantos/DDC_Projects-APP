@@ -1,50 +1,162 @@
-<div class="row">
-    <div class="input-field col s12 red-text">
-      <i class="red-text material-icons prefix">search</i>
-      <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12 l12 m12">
+        <h4 class="center-align">XPTO</h4>
+        <div class="divider"></div>
+      </div>
+      <div class="col s6 offset-l1 l3 m4">
+        <div class="file-path-wrapper right">
+          <a class="materialboxed">
+            <img class="circle " style="height:100%; width:100%;" src="./assets/perfil-padrao.png">
+          </a>
+        </div>
+      </div>
+      <div class="file-path-wrapper col s6 l6 m7">
+        <input class="file-path right validate" id="caminhoLogotipo" type="text">
+      </div>
+      <div class="file-field input-field col s6 l3 m5">
+        <div class="btn waves-effect  waves-light">
+          <i class="material-icons">camera_alt</i>
+          <input type="file">
+        </div>
+      </div>
+
+      <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+        <i class="material-icons prefix">location_city</i>
+        <input type="text" id="nomeFantasia">
+        <label for="nomeFantasia">Nome Fantasia</label>
+      </div>
+
+      <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+        <i class="material-icons prefix">business</i>
+        <input type="text" id="razaoSocial">
+        <label for="razaoSocial">Razão Social</label>
+      </div>
+
+      <div class="col s12 offset-l2 l8 offset-m1 m10">
+        <h6 class="left-align">Contatos</h6>
+        <div class="divider"></div>
+      </div>
+
+      <!--
+        Adicionar Tags dos Contatos
+      -->
+      <div class="row"></div>
+      <div class="col s12 offset-l1 l9 offset-m1 offset-m1 m10">
+        <a class="btn waves-effect waves-light modal-trigger right" href="#modalAddContatos">
+          <i class="material-icons">group_add</i>
+        </a>
+      </div>
+
+      <div class="col s12 offset-l2 l8 offset-m1 m10">
+        <h6 class="left-align">Localização</h6>
+        <div class="divider"></div>
+      </div>
+
+      <div class="input-field col s6 offset-l2 l3 offset-m1 m4">
+        <i class="material-icons prefix">my_location</i>
+        <input [brmasker]="{mask:'00000-000', len:9}" (blur)="onBlurResgataCep()" id="cepEmpresa" type="text">
+        <label for="cepEmpresa" data-error="wrong" data-success="right">CEP</label>
+      </div>
+
+      <div class="input-field col s9 l4 offset-m1 m8">
+        <i class="material-icons prefix">location_on</i>
+        <input type="text" placeholder=" " id="cidadeEmpresa" value="" readonly>
+        <label for="cidadeEmpresa" class="active">Cidade</label>
+      </div>
+
+      <div class="input-field col s3 l1 m2">
+        <input type="text" placeholder=" " id="ufEmpresa" value="" readonly>
+        <label for="ufEmpresa" class="active">UF</label>
+      </div>
+
+      <div class="input-field col s12 offset-l2 l4 offset-m1 m8">
+        <i class="material-icons prefix">location_on</i>
+        <input type="text" placeholder=" " id="bairroEmpresa" value="" readonly>
+        <label for="bairroEmpresa" class="active">Bairro</label>
+      </div>
+
+      <div class="input-field col s12 l4 offset-m1 m8">
+        <i class="material-icons prefix">location_on</i>
+        <input type="text" value=" " id="logradouroEmpresa" readonly>
+        <label for="logradouroEmpresa" class="active">Logradouro</label>
+      </div>
+
+      <div class="input-field col s5 offset-l2 l3 offset-m1 m4">
+        <i class="material-icons prefix">edit_location</i>
+        <input type="text" id="numeroEmpresa">
+        <label for="numeroEmpresa">nº</label>
+      </div>
+
+      <div class="input-field col s7 l5 m6">
+        <input type="text" for="complementoEmpresa">
+        <label for="complementoEmpresa">Complemento</label>
+        
+      </div>
+      <div class="col s12 offset-l2 l8 offset-m1 m10 divider"></div>
     </div>
-    <div class="col s12 l12 m12">
-      <table class="responsive-table bordered striped centered highlight">
-        <thead>
-          <tr>
+    
+  </div>
+  
+  <div class="modal-footer">
+    <div class="col s12 offset-l2 l8 offset-m1 m10">
+      <button class="btn modal-close waves-effect waves-light right padrao-background" (click)="pegaDado()" type="submit" name="btn_enviarProjeto">
+        Editar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12 red-text">
+    <i class="red-text material-icons prefix">search</i>
+    <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+  </div>
+  <div class="col s12 l12 m12">
+    <table class="responsive-table bordered striped centered highlight">
+      <thead>
+        <tr>
           <th>Nome</th>
           <th>Email</th>
           <th>Telefone</th>
           <th>Detalhes</th>
         </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Atento</td>
-            <td>desatento@atento.com.br</td>
-            <td>(11)4002-8922</td>
-            <td class="centered">
-              <a class="modal-trigger" href="#modal1">
-                <i class="material-icons">remove_red_eye</i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Claro</td>
-            <td>escuro@claro.com.br</td>
-            <td>(11)8922-4002</td>
-            <td class="centered">
-              <a class="modal-trigger" href="#modal1">
-                <i class="material-icons">remove_red_eye</i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Itaú</td>
-            <td>unibanco@itau.com.br</td>
-            <td>(11)4022-8902</td>
-            <td class="centered">
-              <a class="modal-trigger" href="#modal1">
-                <i class="material-icons">remove_red_eye</i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      </thead>
+      <tbody>
+        <tr>
+          <td>logo</td>
+          <td>Atento</td>
+          <td>desatento@atento.com.br</td>
+
+          <td class="centered">
+            <a class="modal-trigger" href="#modal1">
+              <i class="material-icons">remove_red_eye</i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>logo</td>
+          <td>Claro</td>
+          <td>escuro@claro.com.br</td>
+          <td class="centered">
+            <a class="modal-trigger" href="#modal1">
+              <i class="material-icons">remove_red_eye</i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>logo</td>
+          <td>Itaú</td>
+          <td>unibanco@itau.com.br</td>
+          <td class="centered">
+            <a class="modal-trigger" href="#modal1">
+              <i class="material-icons">remove_red_eye</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

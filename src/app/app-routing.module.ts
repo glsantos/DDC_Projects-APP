@@ -18,7 +18,7 @@ import { PermissaoComponent } from './gerenciamento/permissao/permissao.componen
 
 let routes = [
     { path : "home", component: HomeComponent},
-    { path : "projeto", component: ProjetosComponent},
+    { path : "projeto", component: ProjetosComponent,},
     { path : "atividade", component: AtividadeComponent},
     { path : "relatorio", component: RelatoriosComponent},
     { path : "departamento", component: DepartamentoComponent},

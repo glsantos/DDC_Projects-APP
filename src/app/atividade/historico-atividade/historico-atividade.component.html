@@ -1,3 +1,95 @@
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12 l12 m12">
+        <h4 class="center-align">Atividade</h4>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 offset-l1 l10 offset-m1 m10">
+        <i class="material-icons prefix">spellcheck</i>
+        <select>
+          <option value="1">Desenvolvimento</option>
+          <option value="2">Reunião</option>
+          <option value="3">Visita Cliente</option>
+          <option value="4">Outros</option>
+        </select>
+      </div>
+
+      <div class="input-field col s12 offset-l1 l10 offset-m1 m10">
+        <i class="material-icons prefix">work</i>
+        <select>
+          <option value="1">Projeto X</option>
+          <option value="2">Projeto P</option>
+          <option value="3">Projeto T</option>
+          <option value="4">Projeto O</option>
+        </select>
+      </div>
+
+      <div class="col s12 offset-l1 l10 offset-m2 m8">
+        <h6 class="left-align">Data</h6>
+        <div class="divider"></div>
+      </div>
+      <div class="input-field col s6  offset-l3 l3 offset-m2 m4">
+        <i class="material-icons prefix">calendar_today</i>
+        <input id="dt_inicial" type="text" (click)="clickDate()" class="datepicker">
+        <label for="dt_inicial" data-success="">Início</label>
+      </div>
+      <div class="input-field col s6 l3 m4">
+        <i class="material-icons prefix">today</i>
+        <input type="text" (click)="clickDate()" class="datepicker">
+        <label for="Data de Término(Previsto)" data-success="">Fim</label>
+      </div>
+
+
+      <div class="col s12 offset-l1 l10 offset-m2 m8">
+        <h6 class="left-align">Hora</h6>
+        <div class="divider"></div>
+      </div>
+      <div class="input-field col s6 offset-l3 l3 offset-m2 m4">
+        <i class="material-icons prefix">access_time</i>
+        <input id="hr_inicial" type="text" class="timepicker active">
+        <label for="hr_inicial" data-success="">Começo</label>
+      </div>
+      <div class="input-field col s6 l3 m4">
+        <i class="material-icons prefix">watch_later</i>
+        <input id="hr_final" type="text" class="timepicker" readonly>
+        <label for="hr_final">Término</label>
+      </div>
+
+      <div class="input-field col s12 offset-l1 l10 offset-m1 m10">
+          <div class="card">
+            <div class="card-title">
+              <h6>Descrição <i (click)="editarDescricao()" id="icon_editarDescricao" class="material-icons right">edit</i></h6>
+            </div>
+            <div id="txt_descricaoModal" [froalaEditor]></div>
+            <div class="card-content" id="card_descricaoModal">
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                little markup to use effectively.</p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div class="col s12 offset-l1 l10 offset-m1 m10">
+      <button class="btn modal-close waves-effect waves-light right padrao-background" (click)="pegaDado()" type="submit" name="btn_enviarProjeto">
+        Editar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+  Modal Detalhes Atividades
+-->
+
 <div class="row">
   <div class="input-field col s12 red-text">
     <i class="red-text material-icons prefix">search</i>
@@ -7,11 +99,11 @@
     <table class="responsive-table bordered striped centered highlight">
       <thead>
         <tr>
-        <th>Data</th>
-        <th>Projeto</th>
-        <th>Atividade</th>
-        <th>Detalhes</th>
-      </tr>
+          <th>Data</th>
+          <th>Projeto</th>
+          <th>Atividade</th>
+          <th>Detalhes</th>
+        </tr>
       </thead>
       <tbody>
         <tr>

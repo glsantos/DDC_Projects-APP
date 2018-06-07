@@ -37,6 +37,7 @@ import { FasesProjetoComponent } from './gerenciamento/fases-projeto/fases-proje
 import { PermissaoComponent } from './gerenciamento/permissao/permissao.component';
 import { CadastroEmpresaComponent } from './gerenciamento/empresa/cadastro-empresa/cadastro-empresa.component';
 import { ConsultaEmpresaComponent } from './gerenciamento/empresa/consulta-empresa/consulta-empresa.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { ConsultaEmpresaComponent } from './gerenciamento/empresa/consulta-empre
     PermissaoComponent,
     CadastroEmpresaComponent,
     ConsultaEmpresaComponent,
+    RodapeComponent,
   ],
   imports: [
     BrowserModule,
