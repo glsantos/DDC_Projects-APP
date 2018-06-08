@@ -18,6 +18,7 @@ export class ProjetosComponent implements OnInit {
 
     $('select').material_select();
     $('.collapsible').collapsible();
+    $('.modal').modal();
     
   }
 

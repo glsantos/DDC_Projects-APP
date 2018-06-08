@@ -1,0 +1,279 @@
+<!-- MODAL Detalhes/Edição Projetos -->
+<div id="modalTeste" class="modal">
+
+  <div class="modal-header"></div>
+
+  <div class="modal-content">
+
+    <div id="modal_contentVisualizarProjeto">
+      <a id="btn_EditarProjeto" (click)="desbloquearEdicaoProjeto()" class="btn-floating btn-large waves-effect waves-light right red">
+        <i class="material-icons">edit</i>
+      </a>
+
+      <div class="row">
+        <div class="col s12 l12 m12">
+          <h5 id="tituloProjeto" class="center-align">Gerenciar Atividades e Documentos</h5>
+          <div class="divider"></div>
+        </div>
+        <div class="row"></div>
+        <div class="input-field col s7 l3 m4">
+          <i class="material-icons prefix">date_range</i>
+          <input id="dtInicioProjeto" type="text" value="00/00/0000" readonly>
+          <label class="active" for="Data de Início" data-success="">Data Inicial</label>
+        </div>
+        <div class="input-field col s7 l3 m4">
+          <i class="material-icons prefix">date_range</i>
+          <input id="dtFinalProjeto" type="text" value="00/00/0000" readonly>
+          <label for="Data de Término(Previsto)" data-success="">Data Final</label>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <i class="material-icons prefix">person</i>
+          <label class="active" for="txt_dataInicio">Cliente</label>
+          <input id="clienteProjeto" type="text" value="Nome do Projeto Mega Extenso - Atento" readonly>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <i class="material-icons prefix">person</i>
+          <label class="active" for="txt_dataInicio">Responsável ddCom</label>
+          <input id="responsavelProjeto" type="text" value="Gabriel Santos" readonly>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <i class="material-icons prefix">person</i>
+          <label class="active" for="txt_dataInicio">Serviço</label>
+          <input id="servicoProjeto" type="text" value="Desenvolvimento" readonly>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <i class="material-icons prefix">person</i>
+          <label class="active" for="txt_dataInicio">Produto</label>
+          <input id="Produto" type="text" value="Projects" readonly>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <h6>Aplicativos</h6>
+          <div class="divider"></div>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <div class="container">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">
+                  App
+
+                </div>
+                <div class="collapsible-body">
+                  <p id="CollapsibleTexto">Lorem ipsum dolor sit amet.</p>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  <p>Outro APP Maneiro</p>
+                </div>
+                <div class="collapsible-body">
+                  <p>Lorem ipsum do outro app.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Outros Serviços</h6>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Pré-Requisitos</h6>
+            </div>
+            <div class="card-content">
+              <p id="card1">I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Pontos Críticos</h6>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal_contentEditarProjeto">
+      <a id="btn_VisualizarProjeto" (click)="bloquearEdicaoProjeto()" class="btn-floating btn-large waves-effect waves-light right red">
+        <i class="material-icons">lock</i>
+      </a>
+      <div class="row">
+        <div class="col s12 l12 m12">
+          <h5 id="tituloEditProjeto" class="center-align"></h5>
+          <div class="divider"></div>
+        </div>
+        <div class="row"></div>
+        <div class="input-field col s7 l3 m4">
+          <i class="material-icons prefix">date_range</i>
+          <input id="dtInicialEditProjeto" type="text" class="datepicker">
+          <label class="active" for="Data de Início" data-success="">Data Inicial</label>
+        </div>
+        <div class="input-field col s7 l3 m4">
+          <i class="material-icons prefix">date_range</i>
+          <input id="dtFinalEditProjeto" type="text" class="datepicker">
+          <label for="Data de Término(Previsto)" data-success="">Data Final</label>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <i class="material-icons prefix">person</i>
+          <label class="active" for="txt_dataInicio">Cliente</label>
+          <input id="clienteEditProjeto" type="text">
+        </div>
+        <div class="input-field col s12 l6 m6">
+          <i class="material-icons prefix">person</i>
+          <select>
+            <option value="1">Responsável 1</option>
+            <option value="2">Responsável 2</option>
+            <option value="3">Responsável 3</option>
+            <option value="4">Responsável 4</option>
+            <option value="5">Responsável 5</option>
+            <option value="6">Responsável 6</option>
+          </select>
+          <label>Responsável ddCom</label>
+        </div>
+
+        <div class="input-field col s12 l6 m6">
+          <i class="material-icons prefix">person</i>
+          <select>
+            <option value="1">Serviço 1</option>
+            <option value="2">Serviço 2</option>
+            <option value="3">Serviço 3</option>
+            <option value="4">Serviço 4</option>
+            <option value="5">Serviço 5</option>
+            <option value="6">Serviço 6</option>
+          </select>
+          <label>Serviço</label>
+        </div>
+
+        <div class="input-field col s12 l6 m6">
+          <i class="material-icons prefix">person</i>
+          <select>
+            <option value="1">Produto 1</option>
+            <option value="2">Produto 2</option>
+            <option value="3">Produto 3</option>
+            <option value="4">Produto 4</option>
+            <option value="5">Produto 5</option>
+            <option value="6">Produto 6</option>
+          </select>
+          <label>Produto</label>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <label class="active" for="txt_produto_resumo">Aplicações</label>
+          <div class="divider"></div>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <div class="container">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">
+                  
+                </div>
+                <div class="collapsible-body">
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  
+                </div>
+                <div class="collapsible-body">
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Outros Serviços</h6>
+            </div>
+            <div class="card-content">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Pré-Requisitos</h6>
+            </div>
+            <div class="card-content">
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="input-field col s12 l12 m12">
+          <div class="card">
+            <div class="card-title">
+              <h6>Pontos Críticos</h6>
+            </div>
+            <div class="card-content">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn modal-close waves-effect waves-light padrao-background" (click)="pegaDado()" type="submit" name="btn_enviarProjeto">
+          Editar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Corpo da Consulta de Projetos -->
+<div class="input-field col s6 s12 red-text">
+  <i class="red-text material-icons prefix">search</i>
+  <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+</div>
+<table class="responsive-table bordered striped centered highlight">
+  <thead>
+    <tr>
+      <th>Projeto</th>
+      <th>Produto</th>
+      <th>Cliente</th>
+      <th>Início</th>
+      <th>Detalhes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Projeto KeyStone</td>
+      <td>KeyStone</td>
+      <td>Condomínio X</td>
+      <td>11/05/2018</td>
+      <td class="centered">
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
