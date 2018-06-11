@@ -1,40 +1,42 @@
 <!-- MODAL Detalhes/Edição Projetos -->
 <div id="modalTeste" class="modal">
 
-  <div class="modal-header"></div>
-
   <div class="modal-content">
-
     <div id="modal_contentVisualizarProjeto">
-      <a id="btn_EditarProjeto" (click)="desbloquearEdicaoProjeto()" class="btn-floating btn-large waves-effect waves-light right red">
-        <i class="material-icons">edit</i>
-      </a>
-
       <div class="row">
         <div class="col s12 l12 m12">
-          <h5 id="tituloProjeto" class="center-align">Gerenciar Atividades e Documentos</h5>
+          <h5 id="tituloProjeto" class="center-align"></h5>
+          <button id="btn_EditarProjeto" (click)="desbloquearEdicaoProjeto()" class="btn btn-circle btn-small waves-effect waves-light padrao-background right"
+            type="submit">
+            <i class="material-icons">edit</i>
+          </button>
           <div class="divider"></div>
         </div>
-        <div class="row"></div>
+        <div class="row">
+        </div>
+
         <div class="input-field col s7 l3 m4">
           <i class="material-icons prefix">date_range</i>
           <input id="dtInicioProjeto" type="text" value="00/00/0000" readonly>
           <label class="active" for="Data de Início" data-success="">Data Inicial</label>
         </div>
+
         <div class="input-field col s7 l3 m4">
           <i class="material-icons prefix">date_range</i>
           <input id="dtFinalProjeto" type="text" value="00/00/0000" readonly>
-          <label for="Data de Término(Previsto)" data-success="">Data Final</label>
+          <label class="active" for="Data de Término(Previsto)" data-success="">Data Final</label>
         </div>
+
         <div class="input-field col s12 l12 m12">
           <i class="material-icons prefix">person</i>
           <label class="active" for="txt_dataInicio">Cliente</label>
-          <input id="clienteProjeto" type="text" value="Nome do Projeto Mega Extenso - Atento" readonly>
+          <input id="clienteProjeto" type="text" readonly>
         </div>
+
         <div class="input-field col s12 l12 m12">
           <i class="material-icons prefix">person</i>
           <label class="active" for="txt_dataInicio">Responsável ddCom</label>
-          <input id="responsavelProjeto" type="text" value="Gabriel Santos" readonly>
+          <input id="responsavelProjeto" value="4" type="text" readonly>
         </div>
 
         <div class="input-field col s12 l12 m12">
@@ -56,21 +58,12 @@
         <div class="input-field col s12 l12 m12">
           <div class="container">
             <ul class="collapsible">
-              <li>
+              <li class="appProjeto" *ngFor="let app of apps; let indexApp = index">
                 <div class="collapsible-header">
-                  App
-
+                  {{app.aplicacao}} - {{indexApp}}
                 </div>
                 <div class="collapsible-body">
-                  <p id="CollapsibleTexto">Lorem ipsum dolor sit amet.</p>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  <p>Outro APP Maneiro</p>
-                </div>
-                <div class="collapsible-body">
-                  <p>Lorem ipsum do outro app.</p>
+                  <p>{{app.descricao}}</p>
                 </div>
               </li>
             </ul>
@@ -83,8 +76,7 @@
               <h6>Outros Serviços</h6>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <p id="outro_servico"></p>
             </div>
           </div>
         </div>
@@ -95,8 +87,7 @@
               <h6>Pré-Requisitos</h6>
             </div>
             <div class="card-content">
-              <p id="card1">I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <p id="pre_requisitos"></p>
             </div>
           </div>
         </div>
@@ -106,8 +97,7 @@
               <h6>Pontos Críticos</h6>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <p id="ponto_critico"></p>
             </div>
           </div>
         </div>
@@ -115,12 +105,13 @@
     </div>
 
     <div id="modal_contentEditarProjeto">
-      <a id="btn_VisualizarProjeto" (click)="bloquearEdicaoProjeto()" class="btn-floating btn-large waves-effect waves-light right red">
-        <i class="material-icons">lock</i>
-      </a>
       <div class="row">
         <div class="col s12 l12 m12">
           <h5 id="tituloEditProjeto" class="center-align"></h5>
+          <button id="btn_VisualizarProjeto" (click)="bloquearEdicaoProjeto()" class="btn btn-small waves-effect waves-light padrao-background right"
+          type="submit">
+          <i class="material-icons">remove_red_eye</i>
+        </button>
           <div class="divider"></div>
         </div>
         <div class="row"></div>
@@ -141,13 +132,12 @@
         </div>
         <div class="input-field col s12 l6 m6">
           <i class="material-icons prefix">person</i>
-          <select>
-            <option value="1">Responsável 1</option>
-            <option value="2">Responsável 2</option>
-            <option value="3">Responsável 3</option>
-            <option value="4">Responsável 4</option>
-            <option value="5">Responsável 5</option>
-            <option value="6">Responsável 6</option>
+          <select id="responsavelEditProjeto">
+            <option value="1">Resp1</option>
+            <option value="2">Resp2</option>
+            <option value="3">Resp3</option>
+            <option value="4">Gabriel Santos</option>
+            <option value="5">Resp5</option>
           </select>
           <label>Responsável ddCom</label>
         </div>
@@ -184,21 +174,28 @@
         </div>
         <div class="input-field col s12 l12 m12">
           <div class="container">
-            <ul class="collapsible">
-              <li>
+            <ul class="collapsible" materialize="collapsible">
+              <li *ngFor="let record of records; let myIndex = index">
                 <div class="collapsible-header">
-                  
+                  {{record.name}} - {{myIndex}}
                 </div>
                 <div class="collapsible-body">
-                  <p></p>
+                  <p>{{record.online}}</p>
                 </div>
               </li>
-              <li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="input-field col s12 l12 m12">
+          <div class="container">
+            <ul class="collapsible" materialize="collapsible">
+              <li *ngFor="let app of apps; let indexApp = index">
                 <div class="collapsible-header">
-                  
+                  {{app.aplicacao}} - {{indexApp}}
                 </div>
                 <div class="collapsible-body">
-                  <p></p>
+                  <p>{{app.descricao}}</p>
                 </div>
               </li>
             </ul>

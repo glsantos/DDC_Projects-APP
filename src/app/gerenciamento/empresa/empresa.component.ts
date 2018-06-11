@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+
+declare var $: any;
+declare var JQuery: any;
+declare var closeOnClick: any;
 
 @Component({
   selector: 'app-empresa',
@@ -7,8 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresaComponent implements OnInit {
 
-  constructor() { }
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
 
+  constructor() { }
 
   title = 'interprise';
   ngOnInit() {
@@ -16,4 +25,5 @@ export class EmpresaComponent implements OnInit {
     
   }
 
+  
 }

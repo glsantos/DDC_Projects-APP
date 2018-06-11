@@ -12,12 +12,12 @@
 
 
       <div class="col s12 l12 m12">
-        <h6 class="left-align">Contato</h6>
+        <h6 class="left-align"></h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m6">
+      <div class="input-field col s12 l3 m7">
         <i class="material-icons prefix">account_box</i>
-        <input id="txt_nome_contato" type="text" name="txt_nome_contato">
+        <input id="txt_nome_contato" #contatoEmpresa (keyup)="0" type="text" name="txt_nome_contato">
         <label for="txt_nome_contato">Nome</label>
       </div>
 
@@ -25,12 +25,12 @@
         <h6 class="left-align">Correio Eletrônico/Vídeo-Chamada</h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m3">
+      <div class="input-field col s12 l3 m7">
         <i class="material-icons prefix">mail</i>
         <input id="txt_email_contato" type="email" class="validate" name="txt_email_contato">
         <label for="txt_email_contato">E-mail</label>
       </div>
-      <div class="input-field col s12 l3 m3">
+      <div class="input-field col s12 l3 m5">
         <i class="material-icons prefix">videocam</i>
         <input id="txt_email_contato" type="text" name="txt_email_contato">
         <label for="txt_email_contato">Skype</label>
@@ -40,13 +40,13 @@
         <h6 class="left-align">Telefonia</h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m3">
+      <div class="input-field col s12 l3 m">
         <i class="material-icons prefix">smartphone</i>
         <div [brmasker]="{mask:'(00) 00000-0000', len:15}" class="chips chips-placeholder"></div>
         <label for="txt_telefone_contato">Whatsapp (DDD*Numero)</label>
       </div>
 
-      <div class="input-field col s12 l3 m3">
+      <div class="input-field col s12 l3 m6">
         <i class="material-icons prefix">contact_phone</i>
         <div id="txt_telefone_contato" [brmasker]="{mask:'(00) 0000-0000 - 0000000000000', len:30}" class="chips chips-placeholder"></div>
         <label for="txt_telefone_contato">Fixos (DDD* Número* Ramal)</label>
@@ -73,7 +73,7 @@
 <div class="form-responsive">
   <div class="row">
     <div class="col s12 l12 m12">
-      <h4 class="center-align">Cliente{{nomeFantasia}}</h4>
+      <h4 class="center-align">{{nomeFantasia.value}}</h4>
       <div class="divider"></div>
     </div>
   </div>
@@ -95,7 +95,7 @@
 
     <div class="input-field col s12 offset-l2 l8 m12">
       <i class="material-icons prefix">location_city</i>
-      <input type="text" id="nomeFantasia">
+      <input type="text" #nomeFantasia (keyup)="0" id="nomeFantasia">
       <label for="nomeFantasia">Nome Fantasia</label>
     </div>
 
@@ -106,12 +106,16 @@
     </div>
 
     <div class="col s12 offset-l2 l8 m12">
-      <h6 class="left-align">Localização</h6>
+      <h6 class="left-align">Contatos</h6>
       <div class="divider"></div>
     </div>
-    <div class="col s12 offset-l7 offset-m7">
+    <div class="row"></div>
+    <div class="col s12 l5 m4">
+      <div class="chips">{{contatoEmpresa.value}}</div>
+    </div>
+    <div class="col s12 l7 offset-m8 m4">
       <a class="btn waves-effect waves-light modal-trigger right" href="#modalAddContatos">
-        Contato(s)
+        Contato
         <i class="material-icons left">add</i>
       </a>
     </div>

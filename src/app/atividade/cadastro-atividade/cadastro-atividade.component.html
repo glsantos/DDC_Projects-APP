@@ -1,14 +1,14 @@
 <div class="form-responsive">
   <div class="row">
     <div class="col s12 l12 m12">
-      <h4 class="center-align">Atividade</h4>
+      <h4 class="left-align">Atividade</h4>
       <div class="divider"></div>
     </div>
   </div>
   <div class="row">
-    <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+    <div class="input-field col s12 offset-l1 l5  m6">
       <i class="material-icons prefix">spellcheck</i>
-      <select multiple>
+      <select>
         <option value="0" disabled selected>Selecione a Atividade</option>
         <option value="1">Desenvolvimento</option>
         <option value="2">Reunião</option>
@@ -17,7 +17,7 @@
       </select>
     </div>
 
-    <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+    <div class="input-field col s12 l5 m6">
       <i class="material-icons prefix">work</i>
       <select>
         <option value="0" disabled selected>Selecione o Projeto</option>
@@ -27,9 +27,9 @@
         <option value="4">Projeto O</option>
       </select>
     </div>
-
-    <div class="col s12 offset-l2 l8 offset-m1 m10">
-      <h6 class="left-align">Data</h6>
+    <div class="row"></div>
+    <div class="col s12 l12 m12">
+      <h4 class="left-align">Data e Hora</h4>
       <div class="divider"></div>
     </div>
     <div class="input-field col s6  offset-l3 l3 offset-m2 m4">
@@ -43,11 +43,7 @@
       <label for="Data de Término(Previsto)" data-success="">Fim</label>
     </div>
 
-
-    <div class="col s12 offset-l2 l8 offset-m1 m10">
-      <h6 class="left-align">Hora</h6>
-      <div class="divider"></div>
-    </div>
+    
     <div class="input-field col s6 offset-l3 l3 offset-m2 m4">
       <i class="material-icons prefix">access_time</i>
       <input id="hr_inicial" type="text" class="timepicker active">
@@ -58,20 +54,18 @@
       <input id="hr_final" type="text" class="timepicker" readonly>
       <label for="hr_final">Término</label>
     </div>
-
-
-
-    <div class="col s12 offset-l1 l10 offset-m1 m10">
-      <h6 class="left-align">Descrição</h6>
+    <div class="row"></div>
+    <div class="col s12 l12 m12">
+      <h4 class="left-align">Descrição</h4>
       <div class="divider"></div>
     </div>
-    <div class="input-field col s12 offset-l1 l10 offset-m1 m10">
+    <div class="input-field col s12 l12 m12">
       <div id="txt_atividade" [froalaEditor]></div>
     </div>
 
   </div>
   <div class="row">
-    <div class="col s12 offset-l1 l10 m11">
+    <div class="col s12 offset-l2 l10 offset-m1 m11">
       <button class="btn waves-effect waves-light right" type="submit" name="action">
         Confirmar
         <i class="material-icons right">send</i>

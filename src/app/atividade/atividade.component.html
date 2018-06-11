@@ -1,5 +1,23 @@
-<div class="row">
-  <div class="container">
+<div class="container">
+
+  <ul class="tabs">
+    <li class="tab col s3">
+      <a class="active" href="#tabsHistoricoAtividade">Minhas Atividades</a>
+    </li>
+    <li class="tab col s3">
+      <a href="#tabsNovaAtividade">Nova Atividade</a>
+    </li>
+  </ul>
+
+  <!-- TABS 1 -->
+  <div id="tabsHistoricoAtividade" class="col s12">
+    <div class="card">
+      <app-historico-atividade></app-historico-atividade>
+    </div>
+  </div>
+
+  <!-- TABS 2 - Cadastro de Projeto -->
+  <div id="tabsNovaAtividade" class="col s12">
     <ul class="collapsible" data-collapsible="accordion">
       <li>
         <div class="collapsible-header active">
@@ -12,18 +30,6 @@
 
         </div>
       </li>
-      <li>
-        <div class="collapsible-header">
-          <i class="material-icons col">timeline</i>
-          Minhas Atividades
-        </div>
-        <div class="collapsible-body">
-          
-          <app-historico-atividade></app-historico-atividade>
-
-        </div>
-      </li>
-    
     </ul>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var JQuery: any;
 
+
 @Component({
   selector: 'app-cadastro-projeto',
   templateUrl: './cadastro-projeto.component.html',
@@ -12,11 +13,12 @@ declare var JQuery: any;
 })
 export class CadastroProjetoComponent implements OnInit {
 
+
+ 
   constructor() { }
 
   ngOnInit() {
 
-    
 
     $('.modal').modal();
     $('select').material_select();

@@ -5,6 +5,7 @@ declare var $: any;
 declare var JQuery: any;
 declare var closeOnClick: any;
 
+
 @Component({
   selector: 'app-projetos',
   templateUrl: './projetos.component.html',
@@ -12,9 +13,15 @@ declare var closeOnClick: any;
 })
 export class ProjetosComponent implements OnInit {
 
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
+
   constructor() { }
-  
+ 
   ngOnInit() {
+
 
     $('select').material_select();
     $('.collapsible').collapsible();

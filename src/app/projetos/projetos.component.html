@@ -1,80 +1,80 @@
 <!--App do modal-->
 <!--Modal-->
-
 <div class="container">
-  <ul class="tabs">
-    <li class="tab col s3">
-      <a class="active" href="#tabsConsultaProjetos">Projetos</a>
-    </li>
-    <li class="tab col s3">
-      <a href="#tabsNovoProjeto">Novo Projeto</a>
-    </li>
-  </ul>
-
-  <!-- TABS 1 -->
-  <div id="tabsConsultaProjetos" class="col s12">
-    <div class="card">
-      <app-consulta-projeto></app-consulta-projeto>
-    </div>
-  </div>
-
-  <!-- TABS 2 -->
-  <div id="tabsNovoProjeto" class="col s12">
-
-    <ul class="collapsible" data-collapsible="accordion">
-
-      <!--1º Passo-->
-      <li>
-        <div class="collapsible-header active">
-          <i class="material-icons col">perm_device_information</i>
-
-          Projeto
-        </div>
-        <div class="collapsible-body">
-
-          <app-cadastro-projeto></app-cadastro-projeto>
-
-        </div>
+  
+    <ul class="tabs">
+      <li class="tab col s3">
+        <a href="#tabsConsultaProjetos">Projetos</a>
       </li>
-
-
-      <!--2º Passo-->
-      <li>
-        <div class="collapsible-header">
-          <i class="material-icons">phonelink_setup</i>
-          Produto e Customizações
-        </div>
-        <div class="collapsible-body">
-          <!--Colocar modulo de Produtos e Aplicativos de Projeto-->
-          <app-cadastro-produto-projeto></app-cadastro-produto-projeto>
-        </div>
-      </li>
-
-
-      <!--3º Passo-->
-      <li>
-        <div class="collapsible-header">
-          <i class="material-icons">device_unknown</i>
-          Pré-Requisitos e Pontos Críticos
-        </div>
-        <div class="collapsible-body">
-          <!--Colocar modulo de Pré-Requisitos e Pontos Críticos de Projeto-->
-          <app-cadastro-requisitos-projeto></app-cadastro-requisitos-projeto>
-        </div>
-      </li>
-
-
-      <!--4º Passo-->
-      <li>
-        <div class="collapsible-header">
-          <i class="material-icons">mobile_friendly</i>
-          Resumo
-        </div>
-        <div class="collapsible-body">
-          <!--Colocar modulo de Resumo do Projeto-->
-          <app-cadastro-resumo-projeto></app-cadastro-resumo-projeto>
-        </div>
+      <li class="tab col s3">
+        <a class="active" href="#tabsNovoProjeto">Novo Projeto</a>
       </li>
     </ul>
-  </div>
+
+    <!-- TABS 1 -->
+    <div id="tabsConsultaProjetos" class="col s12">
+      <div class="card">
+        <app-consulta-projeto></app-consulta-projeto>
+      </div>
+    </div>
+
+    <!-- TABS 2 - Cadastro de Projeto -->
+    <div id="tabsNovoProjeto" class="col s12">
+
+      <ul class="collapsible" data-collapsible="accordion">
+
+        <!--1º Passo-->
+        <li>
+          <div class="collapsible-header active">
+            <i class="material-icons col">perm_device_information</i>
+
+            Projeto
+          </div>
+          <div class="collapsible-body">
+
+            <app-cadastro-projeto></app-cadastro-projeto>
+
+          </div>
+        </li>
+
+
+        <!--2º Passo-->
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">phonelink_setup</i>
+            Produto e Customizações
+          </div>
+          <div class="collapsible-body">
+            <!--Colocar modulo de Produtos e Aplicativos de Projeto-->
+            <app-cadastro-produto-projeto></app-cadastro-produto-projeto>
+          </div>
+        </li>
+
+
+        <!--3º Passo-->
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">device_unknown</i>
+            Pré-Requisitos e Pontos Críticos
+          </div>
+          <div class="collapsible-body">
+            <!--Colocar modulo de Pré-Requisitos e Pontos Críticos de Projeto-->
+            <app-cadastro-requisitos-projeto></app-cadastro-requisitos-projeto>
+          </div>
+        </li>
+
+
+        <!--4º Passo-->
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">mobile_friendly</i>
+            Resumo
+          </div>
+          <div class="collapsible-body">
+            <!--Colocar modulo de Resumo do Projeto-->
+            <app-cadastro-resumo-projeto></app-cadastro-resumo-projeto>
+          </div>
+        </li>
+      </ul>
+    </div>
 </div>
