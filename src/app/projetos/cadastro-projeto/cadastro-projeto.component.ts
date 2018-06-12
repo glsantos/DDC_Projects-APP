@@ -18,11 +18,14 @@ export class CadastroProjetoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-
+    
     $('.modal').modal();
     $('select').material_select();
     $('ul.tabs').tabs(); 
+
+    $("#teste option").mouseover(function() {
+      console.log('a');
+    });      
 
     $('.datepicker').pickadate({
 

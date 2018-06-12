@@ -1,3 +1,37 @@
+<div class="modal" id="modalAssociarContatoProjeto">
+  <div class="modal-content">
+    <div class="col s12 l12 m12">
+      <h5>Contatos de: {{cliente}}</h5>
+      <div class="divider"></div>
+    </div>
+    <div class="input-field col s6 s12 red-text">
+      <i class="red-text material-icons prefix">search</i>
+      <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+    </div>
+    <table class="responsive-table bordered striped centered highlight">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Associar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rogério</td>
+          <td>ralmeida@cliente.com.br</td>
+          <td class="centered">
+            <a href="/projeto">
+              <i class="material-icons">add</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 <div class="row">
   <div class="col s12 l12 m12">
     <h4>{{tituloProjeto.value}}</h4>
@@ -6,7 +40,7 @@
 </div>
 
 <div class="row">
-  <div class="input-field col s12 l7 m12">
+  <div class="input-field col s12 l6 m12">
     <i class="material-icons prefix">perm_device_information</i>
     <input id="txt_projeto" #tituloProjeto (keyup)="0" type="text" name="txt_nome_projeto" class="validate">
     <label for="txt_projeto">Nome do Projeto</label>
@@ -14,19 +48,21 @@
     <input #box (keyup)="0">-->
   </div>
 
-    <div class="input-field col s12 l6 m6">
-      <i class="material-icons prefix">important_devices</i>
-      <select multiple>
-        <option value="0" disabled selected>Selecione o tipo de Serviço</option>
-        <option value="1">Desenvolvimento</option>
-        <option value="2">Suporte</option>
-        <option value="3">Implantação Produto</option>
-        <option value="4">Adequação</option>
-        <option value="5">Customização</option>
-        <option value="6">Outros</option>
-      </select>
-      <label>Serviços/Projeto</label>
-    </div>
+  <div class="col offset-l6"></div>
+
+  <div class="input-field col s12 l6 m6">
+    <i class="material-icons prefix">important_devices</i>
+    <select multiple>
+      <option value="0" disabled selected>Selecione o tipo de Serviço</option>
+      <option value="1">Desenvolvimento</option>
+      <option value="2">Suporte</option>
+      <option value="3">Implantação Produto</option>
+      <option value="4">Adequação</option>
+      <option value="5">Customização</option>
+      <option value="6">Outros</option>
+    </select>
+    <label>Serviços/Projeto</label>
+  </div>
 
   <div class="input-field col s12 l6 m6">
     <i class="material-icons prefix">person</i>
@@ -64,20 +100,11 @@
     </select>
     <label>Cliente</label>
   </div>
-  <div class="input-field col s12 l6 m6">
-
-    <i class="material-icons prefix">person</i>
-
-    <select multiple>
-      <option value="0" disabled selected>Selecione algum Contato</option>
-      <option value="1">Contato 1</option>
-      <option value="2">Contato 2</option>
-      <option value="3">Contato 3</option>
-      <option value="4">Contato 4</option>
-      <option value="5">Contato 5</option>
-      <option value="6">Contato 6</option>
-    </select>
-    <label>Contato</label>
+  <div class="col s12 l6 m6">
+    <a class="btn waves-effect waves-light modal-trigger left" href="#modalAssociarContatoProjeto">
+      <i class="material-icons right">add</i>
+      Contato
+    </a>
   </div>
 </div>
 

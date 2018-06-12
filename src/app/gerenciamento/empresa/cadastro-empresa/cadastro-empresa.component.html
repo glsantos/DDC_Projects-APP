@@ -6,47 +6,42 @@
     <div class="row">
 
       <div class="col s12 l12 m12">
-        <h4 class="center-align">Contatos</h4>
+        <h4 class="center-align">Aqui vem Data Binding do nome do cara</h4>
 
       </div>
 
 
       <div class="col s12 l12 m12">
-        <h6 class="left-align"></h6>
+        <h6 class="left-align">Contato</h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m7">
+      <div class="input-field col s12 l6 m7">
         <i class="material-icons prefix">account_box</i>
         <input id="txt_nome_contato" #contatoEmpresa (keyup)="0" type="text" name="txt_nome_contato">
         <label for="txt_nome_contato">Nome</label>
       </div>
 
       <div class="col s12 l12 m12">
-        <h6 class="left-align">Correio Eletrônico/Vídeo-Chamada</h6>
+        <h6 class="left-align">Correio eletrônico</h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m7">
+      <div class="input-field col s12 l6 m7">
         <i class="material-icons prefix">mail</i>
         <input id="txt_email_contato" type="email" class="validate" name="txt_email_contato">
         <label for="txt_email_contato">E-mail</label>
       </div>
-      <div class="input-field col s12 l3 m5">
-        <i class="material-icons prefix">videocam</i>
-        <input id="txt_email_contato" type="text" name="txt_email_contato">
-        <label for="txt_email_contato">Skype</label>
-      </div>
 
       <div class="col s12 l12 m12">
-        <h6 class="left-align">Telefonia</h6>
+        <h6 class="left-align">Telefone</h6>
         <div class="divider"></div>
       </div>
-      <div class="input-field col s12 l3 m">
+      <div class="input-field col s12 l6 m">
         <i class="material-icons prefix">smartphone</i>
         <div [brmasker]="{mask:'(00) 00000-0000', len:15}" class="chips chips-placeholder"></div>
         <label for="txt_telefone_contato">Whatsapp (DDD*Numero)</label>
       </div>
 
-      <div class="input-field col s12 l3 m6">
+      <div class="input-field col s12 l6 m6">
         <i class="material-icons prefix">contact_phone</i>
         <div id="txt_telefone_contato" [brmasker]="{mask:'(00) 0000-0000 - 0000000000000', len:30}" class="chips chips-placeholder"></div>
         <label for="txt_telefone_contato">Fixos (DDD* Número* Ramal)</label>
@@ -65,7 +60,6 @@
 </div>
 
 
-
 <!--
   Cadastro de Empresas
 -->
@@ -79,91 +73,91 @@
   </div>
   <div class="row">
     <div class="col s12 l12 m12"></div>
-    <div class="col s12 offset-l2 l8 m12">
-      <h6 class="left-align">Logotipo</h6>
+    <div class="col s12 l12 m12">
+      <h4 class="left-align">Cliente</h4>
       <div class="divider"></div>
     </div>
-    <div class="file-field input-field col s12 offset-l2 l8 m12">
-      <div class="btn right">
-        <i class="material-icons">add_photo_alternate</i>
-        <input type="file">
-      </div>
+    <div class="file-field input-field col s12 l3 m4">
       <div class="file-path-wrapper">
-        <input class="file-path validate" id="caminhoLogotipo" type="text">
+        <input type="file">
+        <img class="circle" src="./assets/perfil-padrao.png">
       </div>
     </div>
 
-    <div class="input-field col s12 offset-l2 l8 m12">
+    <div class="input-field col s12 l6 m8">
       <i class="material-icons prefix">location_city</i>
       <input type="text" #nomeFantasia (keyup)="0" id="nomeFantasia">
       <label for="nomeFantasia">Nome Fantasia</label>
     </div>
 
-    <div class="input-field col s12 offset-l2 l8 m12">
+    <div class="input-field col s12 l6 m8">
       <i class="material-icons prefix">business</i>
       <input type="text" id="razaoSocial">
       <label for="razaoSocial">Razão Social</label>
     </div>
+    <div class="row"></div>
 
-    <div class="col s12 offset-l2 l8 m12">
-      <h6 class="left-align">Contatos</h6>
+    <div class="col s12 l12 m12">
+      <h4 class="left-align">Contatos</h4>
       <div class="divider"></div>
     </div>
     <div class="row"></div>
-    <div class="col s12 l5 m4">
-      <div class="chips">{{contatoEmpresa.value}}</div>
-    </div>
-    <div class="col s12 l7 offset-m8 m4">
-      <a class="btn waves-effect waves-light modal-trigger right" href="#modalAddContatos">
+    <div class="col s8 l3 m4">
+      <a class="btn waves-effect waves-light modal-trigger left" href="#modalAddContatos">
+        <i class="material-icons right">add</i>
         Contato
-        <i class="material-icons left">add</i>
       </a>
     </div>
+    <div class="col s12 l9 m8">
+      <div class="chips" readonly>{{contatoEmpresa.value}}</div>
+    </div>
 
-    <div class="col s12 offset-l2 l8 m12">
+
+    <div class="col s12 12 l12 m12">
       <h6 class="left-align">Localização</h6>
       <div class="divider"></div>
     </div>
-    <div class="input-field col s6 offset-l2 l3 m4">
+    <div class="input-field col s6 l3 m3">
       <i class="material-icons prefix">my_location</i>
       <input [brmasker]="{mask:'00000-000', len:9}" (blur)="onBlurResgataCep()" id="cepEmpresa" type="text">
       <label for="cepEmpresa" data-error="wrong" data-success="right">CEP</label>
     </div>
 
+    <div class="col offset-l9 offset-m9"></div>
 
-    <div class="input-field col s9 l4 m6">
+    <div class="input-field col s9 l5 m6">
       <i class="material-icons prefix">location_on</i>
       <input type="text" placeholder=" " id="cidadeEmpresa" value="" readonly>
       <label for="cidadeEmpresa" class="active">Cidade</label>
     </div>
-    <div class="input-field col s3 l1 m2">
-      <input type="text" placeholder=" " id="ufEmpresa" value="" readonly>
+    <div class="input-field col s3 l1 m1">
+      <input type="text" id="ufEmpresa" placeholder=" " value="" readonly>
       <label for="ufEmpresa" class="active">UF</label>
     </div>
-    <div class="input-field col s12 offset-l2 l4 m6">
+    <div class="input-field col s12 l6 m6">
       <i class="material-icons prefix">location_on</i>
       <input type="text" placeholder=" " id="bairroEmpresa" value="" readonly>
       <label for="bairroEmpresa" class="active">Bairro</label>
     </div>
 
-    <div class="input-field col s12 l4 m6">
+    <div class="input-field col s12 l6 m6">
       <i class="material-icons prefix">location_on</i>
       <input type="text" value=" " id="logradouroEmpresa" readonly>
       <label for="logradouroEmpresa" class="active">Logradouro</label>
     </div>
-    <div class="input-field col s5 offset-l2 l3 m4">
+    <div class="input-field col s5 l2 m3">
       <i class="material-icons prefix">edit_location</i>
       <input type="text" id="numeroEmpresa">
       <label for="numeroEmpresa">nº</label>
     </div>
-    <div class="input-field col s7 l5 m8">
+    <div class="input-field col s7 l4 m9">
       <input type="text" for="complementoEmpresa">
       <label for="complementoEmpresa">Complemento</label>
     </div>
 
   </div>
   <div class="row">
-    <div class="col s12 offset-l7 offset-m7">
+    <div class="col s12 offset-l9 offset-m7">
       <button class="btn waves-effect waves-light" type="submit" name="action">
         Confirmar
         <i class="material-icons right">send</i>

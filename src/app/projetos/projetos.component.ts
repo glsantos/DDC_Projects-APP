@@ -17,6 +17,7 @@ export class ProjetosComponent implements OnInit {
   onKey(value: string) {
     this.values += value + ' | ';
   }
+  
 
   constructor() { }
  
@@ -26,6 +27,8 @@ export class ProjetosComponent implements OnInit {
     $('select').material_select();
     $('.collapsible').collapsible();
     $('.modal').modal();
+
+    $('#nomeProjetoResumo').val()
     
   }
 

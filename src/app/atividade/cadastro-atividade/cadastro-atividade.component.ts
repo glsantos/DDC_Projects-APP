@@ -16,6 +16,7 @@ export class CadastroAtividadeComponent implements OnInit {
 
     $('select').material_select();
     $('ul.tabs').tabs(); 
+    $('.checkbox').checkbox(); 
     $('.collapsible').collapsible();
 
     $('#txt_atividade').froalaEditor({
@@ -53,6 +54,11 @@ export class CadastroAtividadeComponent implements OnInit {
       autoclose: true,
       vibrate: true // vibrate the device when dragging clock hand
     });
+  }
+
+  abreModalPesquisarProjetos(){
+
+    alert('a');
   }
 
 }

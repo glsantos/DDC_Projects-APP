@@ -20,3 +20,13 @@ nav{
 .logo{
     height:70px;
 }
+
+#logo_nav{
+    height:100%;
+    width:120px;
+}
+
+#logoProjects{
+    height:100%;
+    width:100%;
+}
