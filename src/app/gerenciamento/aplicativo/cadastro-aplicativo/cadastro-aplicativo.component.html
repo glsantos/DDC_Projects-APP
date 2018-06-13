@@ -1,0 +1,85 @@
+<div class="modal" id="modalAddApps">
+  <div class="modal-content">
+    <div class="col s12 l12 m12">
+      <h5>Contatos de: {{cliente}}</h5>
+      <div class="divider"></div>
+    </div>
+
+    <div class="col s12 l3 m6 right">
+      <a href="/contato" target="_blank" class="btn waves-effect waves-light" type="submit" name="action">
+        Novo
+        <i class="material-icons right">add</i>
+      </a>
+    </div>
+    <table class="responsive-table bordered striped centered highlight">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Associar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rogério</td>
+          <td>ralmeida@cliente.com.br</td>
+          <td class="centered">
+            <a href="/projeto">
+              <i class="material-icons">add</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Aplicativo</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12 offset-l1 l5 m6">
+    <i class="material-icons prefix">add_to_home_screen</i>
+    <input id="txt_nomeApp" type="text" name="txt_nomeApp">
+    <label for="txt_nomeApp">Nome do Aplicativo</label>
+  </div>
+  <div class="input-field col s12 l5 m6">
+    <i class="material-icons prefix">phonelink_setup</i>
+    <select name="slt_produtoApp" id="slt_produtoApp">
+      <option value="">a</option>
+      <option value="">b</option>
+      <option value="">c</option>
+    </select>
+    <label for="slt_produtoApp">Produto</label>
+  </div>
+  <div class="input-field col s4 offset-l1 l2 m3">
+    <i class="material-icons prefix">gamepad</i>
+    <input id="txt_preProdApp" type="text" value="KSE" name="txt_preProdApp" readonly>
+  </div>
+  <div class="input-field col s8 l3 m3">
+    <input id="txt_prefixoApp" type="text" name="txt_prefixoApp">
+    <label for="txt_prefixoApp">Prefixo do App</label>
+  </div>
+
+
+  <div class="col s12 l12 m12">
+    <h5>Descrição do Aplicativo</h5>
+    <div class="divider"></div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l12 m12">
+      <div id="txt_descricaoProdutos" [froalaEditor]></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <button class="btn waves-effect waves-light right" type="submit" name="action">
+    Confirmar
+    <i class="material-icons right">send</i>
+  </button>
+</div>

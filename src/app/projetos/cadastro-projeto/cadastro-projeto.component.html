@@ -4,9 +4,12 @@
       <h5>Contatos de: {{cliente}}</h5>
       <div class="divider"></div>
     </div>
-    <div class="input-field col s6 s12 red-text">
-      <i class="red-text material-icons prefix">search</i>
-      <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+
+    <div class="col s12 l3 m6 right">
+      <a href="/contato" target="_blank" class="btn waves-effect waves-light" type="submit" name="action">
+        Novo
+        <i class="material-icons right">add</i>
+      </a>
     </div>
     <table class="responsive-table bordered striped centered highlight">
       <thead>
@@ -44,8 +47,6 @@
     <i class="material-icons prefix">perm_device_information</i>
     <input id="txt_projeto" #tituloProjeto (keyup)="0" type="text" name="txt_nome_projeto" class="validate">
     <label for="txt_projeto">Nome do Projeto</label>
-    <!--<p>{{box.value}}</p>
-    <input #box (keyup)="0">-->
   </div>
 
   <div class="col offset-l6"></div>
@@ -101,7 +102,7 @@
     <label>Cliente</label>
   </div>
   <div class="col s12 l6 m6">
-    <a class="btn waves-effect waves-light modal-trigger left" href="#modalAssociarContatoProjeto">
+    <a class="btn waves-effect waves-light modal-trigger right" href="#modalAssociarContatoProjeto">
       <i class="material-icons right">add</i>
       Contato
     </a>

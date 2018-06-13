@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 declare var $: any;
 declare var JQuery: any;
-
 
 @Component({
   selector: 'app-cadastro-projeto',
@@ -13,28 +10,27 @@ declare var JQuery: any;
 })
 export class CadastroProjetoComponent implements OnInit {
 
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
 
- 
   constructor() { }
 
   ngOnInit() {
-    
+
     $('.modal').modal();
     $('select').material_select();
-    $('ul.tabs').tabs(); 
-
-    $("#teste option").mouseover(function() {
-      console.log('a');
-    });      
+    $('ul.tabs').tabs();
 
     $('.datepicker').pickadate({
 
-      monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
-      monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
-      weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
-      weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb' ],
+      monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+      monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      weekdaysFull: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+      weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
       //Materialize modified
-      weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+      weekdaysLetter: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
       today: 'Hoje',
       clear: 'Limpar',
       close: 'Pronto',
@@ -54,7 +50,7 @@ export class CadastroProjetoComponent implements OnInit {
     });
   }
 
-  private pegaDado(){
+  private pegaDado() {
 
     var nome = $("[name=txt_nome_projeto]").val();
     alert(nome);

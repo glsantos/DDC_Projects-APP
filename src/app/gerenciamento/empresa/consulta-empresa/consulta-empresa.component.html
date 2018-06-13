@@ -5,62 +5,57 @@
         <h4 class="center-align">XPTO</h4>
         <div class="divider"></div>
       </div>
-      <div class="col s6 offset-l1 l3 m4">
-        <div class="file-path-wrapper right">
-          <a class="materialboxed">
-            <img class="circle " style="height:100%; width:100%;" src="./assets/perfil-padrao.png">
-          </a>
-        </div>
-      </div>
-      <div class="file-path-wrapper col s6 l6 m7">
-        <input class="file-path right validate" id="caminhoLogotipo" type="text">
-      </div>
-      <div class="file-field input-field col s6 l3 m5">
-        <div class="btn waves-effect  waves-light">
-          <i class="material-icons">camera_alt</i>
-          <input type="file">
-        </div>
-      </div>
 
-      <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+      <div class="file-field input-field col s12 l3 m4">
+        <div class="file-path-wrapper">
+          <input type="file">
+          <img class="circle" src="./assets/perfil-padrao.png">
+        </div>
+      </div>
+      <div class="input-field col s12 l8 offset-m1 m10">
         <i class="material-icons prefix">location_city</i>
         <input type="text" id="nomeFantasia">
         <label for="nomeFantasia">Nome Fantasia</label>
       </div>
 
-      <div class="input-field col s12 offset-l2 l8 offset-m1 m10">
+      <div class="input-field col s12  l8 offset-m1 m10">
         <i class="material-icons prefix">business</i>
         <input type="text" id="razaoSocial">
         <label for="razaoSocial">Razão Social</label>
       </div>
 
-      <div class="col s12 offset-l2 l8 offset-m1 m10">
-        <h6 class="left-align">Contatos</h6>
+      <div class="row"></div>
+      <div class="col s12 l12 m12">
+        <h5 class="left-align">Contatos</h5>
         <div class="divider"></div>
       </div>
-
+      <div class="input-field col s12 l4 m6">
+        <i class="material-icons prefix">phone</i>
+        <input type="text" id="razaoSocial">
+        <label for="razaoSocial">Telefone</label>
+      </div>
+      <div class="input-field col s12 l8 m6">
+        <i class="material-icons prefix">mail</i>
+        <input type="text" id="razaoSocial">
+        <label for="razaoSocial">E-mail</label>
+      </div>
       <!--
         Adicionar Tags dos Contatos
       -->
-      <div class="row"></div>
-      <div class="col s12 offset-l1 l9 offset-m1 offset-m1 m10">
-        <a class="btn waves-effect waves-light modal-trigger right" href="#modalAddContatos">
-          <i class="material-icons">group_add</i>
-        </a>
-      </div>
 
-      <div class="col s12 offset-l2 l8 offset-m1 m10">
-        <h6 class="left-align">Localização</h6>
+      <div class="col s12 l12 m12">
+        <h5 class="left-align">Localização</h5>
         <div class="divider"></div>
       </div>
-
-      <div class="input-field col s6 offset-l2 l3 offset-m1 m4">
+      <div class="input-field col s6 l3 offset-m1 m4">
         <i class="material-icons prefix">my_location</i>
         <input [brmasker]="{mask:'00000-000', len:9}" (blur)="onBlurResgataCep()" id="cepEmpresa" type="text">
         <label for="cepEmpresa" data-error="wrong" data-success="right">CEP</label>
       </div>
 
-      <div class="input-field col s9 l4 offset-m1 m8">
+      <div class="col offset-l9"></div>
+
+      <div class="input-field col s9 l5 offset-m1 m8">
         <i class="material-icons prefix">location_on</i>
         <input type="text" placeholder=" " id="cidadeEmpresa" value="" readonly>
         <label for="cidadeEmpresa" class="active">Cidade</label>
@@ -71,34 +66,34 @@
         <label for="ufEmpresa" class="active">UF</label>
       </div>
 
-      <div class="input-field col s12 offset-l2 l4 offset-m1 m8">
+      <div class="input-field col s12 l6 offset-m1 m8">
         <i class="material-icons prefix">location_on</i>
         <input type="text" placeholder=" " id="bairroEmpresa" value="" readonly>
         <label for="bairroEmpresa" class="active">Bairro</label>
       </div>
 
-      <div class="input-field col s12 l4 offset-m1 m8">
+      <div class="input-field col s12 l6 offset-m1 m8">
         <i class="material-icons prefix">location_on</i>
         <input type="text" value=" " id="logradouroEmpresa" readonly>
         <label for="logradouroEmpresa" class="active">Logradouro</label>
       </div>
 
-      <div class="input-field col s5 offset-l2 l3 offset-m1 m4">
+      <div class="input-field col s5 l2 m4">
         <i class="material-icons prefix">edit_location</i>
         <input type="text" id="numeroEmpresa">
         <label for="numeroEmpresa">nº</label>
       </div>
 
-      <div class="input-field col s7 l5 m6">
+      <div class="input-field col s7 l4 m6">
         <input type="text" for="complementoEmpresa">
         <label for="complementoEmpresa">Complemento</label>
-        
+
       </div>
       <div class="col s12 offset-l2 l8 offset-m1 m10 divider"></div>
     </div>
-    
+
   </div>
-  
+
   <div class="modal-footer">
     <div class="col s12 offset-l2 l8 offset-m1 m10">
       <button class="btn modal-close waves-effect waves-light right padrao-background" (click)="pegaDado()" type="submit" name="btn_enviarProjeto">

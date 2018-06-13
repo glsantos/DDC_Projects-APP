@@ -17,7 +17,6 @@ import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { UsuarioComponent } from './gerenciamento/usuario/usuario.component';
 import { PerfilUsuarioComponent } from './gerenciamento/usuario/perfil-usuario/perfil-usuario.component';
 import { ContatoComponent } from './gerenciamento/contato/contato.component';
-import { TipoAplicativoComponent } from './gerenciamento/aplicativo/tipo-aplicativo/tipo-aplicativo.component';
 import { ProdutoComponent } from './gerenciamento/produto/produto.component';
 import { SetorComponent } from './gerenciamento/setor/setor.component';
 import { FuncaoComponent } from './gerenciamento/funcao/funcao.component';
@@ -39,6 +38,10 @@ import { CadastroEmpresaComponent } from './gerenciamento/empresa/cadastro-empre
 import { ConsultaEmpresaComponent } from './gerenciamento/empresa/consulta-empresa/consulta-empresa.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ConsultaProjetoComponent } from './projetos/consulta-projeto/consulta-projeto.component';
+import { CadastroProdutoComponent } from './gerenciamento/produto/cadastro-produto/cadastro-produto.component';
+import { ConsultaProdutoComponent } from './gerenciamento/produto/consulta-produto/consulta-produto.component';
+import { ConsultaAplicativoComponent } from './gerenciamento/aplicativo/consulta-aplicativo/consulta-aplicativo.component';
+import { CadastroAplicativoComponent } from './gerenciamento/aplicativo/cadastro-aplicativo/cadastro-aplicativo.component';
 
 
 @NgModule({
@@ -51,7 +54,6 @@ import { ConsultaProjetoComponent } from './projetos/consulta-projeto/consulta-p
     UsuarioComponent,
     PerfilUsuarioComponent,
     ContatoComponent,
-    TipoAplicativoComponent,
     ProdutoComponent,
     SetorComponent,
     FuncaoComponent,
@@ -73,6 +75,10 @@ import { ConsultaProjetoComponent } from './projetos/consulta-projeto/consulta-p
     ConsultaEmpresaComponent,
     RodapeComponent,
     ConsultaProjetoComponent,
+    CadastroProdutoComponent,
+    ConsultaProdutoComponent,
+    ConsultaAplicativoComponent,
+    CadastroAplicativoComponent,
   ],
   imports: [
     BrowserModule,

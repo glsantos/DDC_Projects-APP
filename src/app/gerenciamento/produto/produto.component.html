@@ -1,3 +1,40 @@
-<p>
-  produto works!
-</p>
+<!--App do modal-->
+<!--Modal-->
+<div class="container">
+  
+    <ul class="tabs">
+      <li class="tab col s3">
+        <a class="active" href="#tabsConsultaProjetos">Produtos</a>
+      </li>
+      <li class="tab col s3">
+        <a href="#tabsNovoProjeto">Novo Produto</a>
+      </li>
+    </ul>
+
+    <!-- TABS 1 -->
+    <div id="tabsConsultaProjetos" class="col s12">
+      <div class="card">
+
+        <app-consulta-produto></app-consulta-produto>
+      </div>
+    </div>
+    <!-- TABS 2 -->
+    <div id="tabsNovoProjeto" class="col s12">
+
+      <ul class="collapsible" data-collapsible="accordion">
+
+        <!--1º Passo-->
+        <li>
+          <div class="collapsible-header active">
+            <i class="material-icons col">phonelink_setup</i>
+
+            Registrar Produto
+          </div>
+          <div class="collapsible-body">
+
+            <app-cadastro-produto></app-cadastro-produto>
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<!-- MODAL Detalhes/Edição Projetos -->
+<div id="modalTeste" class="modal">
+
+  <div class="modal-content">
+
+    <div class="row">
+      <div class="col s12 l12 m12">
+        <h4>Produto</h4>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 offset-l2 l5 m8">
+        <i class="material-icons prefix">verified_user</i>
+        <input id="txt_nomeProduto" type="text" name="txt_nomeProduto">
+        <label for="txt_nomeProduto">Nome do Produto</label>
+      </div>
+      <div class="input-field col s12 l3 m4">
+        <i class="material-icons prefix">check_circle</i>
+        <input id="txt_abreaviacaoProduto" type="text" name="txt_abreaviacaoProduto">
+        <label for="txt_abreaviacaoProduto">Abreviação</label>
+      </div>
+
+      <div class="col s12 l12 m12">
+        <h5>Descrição do Produto</h5>
+        <div class="divider"></div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 l12 m12">
+          <div id="txt_descricaoProdutos" [froalaEditor]></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn waves-effect waves-light right" type="submit" name="action">
+        Editar
+        <i class="material-icons right">edit</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Corpo da Consulta de Projetos -->
+<div class="input-field col s6 s12 red-text">
+  <i class="red-text material-icons prefix">search</i>
+  <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+</div>
+<table class="responsive-table bordered striped centered highlight">
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Descrição</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mercury 2.0 Robotic</td>
+      <td>Lorem Ipsum...</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>KeyStone Enterprise</td>
+      <td>Lorem Ipsum...</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>KeyStone Security</td>
+      <td>Lorem Ipsum...</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

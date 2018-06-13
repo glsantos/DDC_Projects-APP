@@ -13,6 +13,10 @@ declare let Materialize: any;
 })
 export class CadastroEmpresaComponent implements OnInit {
 
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
 
   constructor() { }
 

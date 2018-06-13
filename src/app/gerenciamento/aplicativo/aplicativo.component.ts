@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any;
+declare var JQuery: any;
+
 @Component({
   selector: 'app-aplicativo',
   templateUrl: './aplicativo.component.html',
@@ -10,6 +13,8 @@ export class AplicativoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    $('ul.tabs').tabs();
   }
 
 }
