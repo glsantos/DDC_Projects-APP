@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
+declare var Materialize: any;
 declare var JQuery: any;
 
 @Component({
@@ -15,6 +16,7 @@ export class AplicativoComponent implements OnInit {
   ngOnInit() {
 
     $('ul.tabs').tabs();
+    Materialize.updateTextFields();
   }
 
 }

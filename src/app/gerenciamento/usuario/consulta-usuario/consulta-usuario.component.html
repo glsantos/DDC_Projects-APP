@@ -1,0 +1,103 @@
+<!-- MODAL Detalhes/Edição Projetos -->
+<div id="modalTeste" class="modal">
+
+  <div class="modal-content">
+
+    <div class="row">
+      <div class="col s12 l12 m12">
+        <h5>{{usuario}}</h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 l6 l5 m6">
+        <i class="material-icons prefix">phonelink_setup</i>
+        <select name="slt_profissional" id="slt_profissional">
+          <option value="">Junior Alves</option>
+          <option value="">Profissional Pleno</option>
+          <option value="">Profissional Júnior</option>
+          <option value="">Profissional Trainee</option>
+        </select>
+        <label for="slt_profissional">Profissional</label>
+      </div>
+      <div class="input-field col s12 l6 l5 m6">
+        <i class="material-icons prefix">phonelink_setup</i>
+        <select name="slt_perfil" id="slt_perfil">
+          <option value="">Operacional 1</option>
+          <option value="">Perfil Pleno</option>
+          <option value="">Perfil Júnior</option>
+          <option value="">Perfil Trainee</option>
+        </select>
+        <label for="slt_perfil">Perfil</label>
+      </div>
+      <div class="input-field col s12 l6 m6">
+        <i class="material-icons prefix">add_to_home_screen</i>
+        <input id="txt_login" type="text" name="txt_login">
+        <label for="txt_login" class="active">Login</label>
+      </div>
+      <div class="col offset-m6 offset-l6"></div>
+      <div class="input-field col s12 l6 m6">
+        <i class="material-icons prefix">add_to_home_screen</i>
+        <input id="txt_senha" type="password" name="txt_senha">
+        <label for="txt_senha" class="active">Senha</label>
+      </div>
+      <div class="input-field col s12 l6 m6">
+        <i class="material-icons prefix">add_to_home_screen</i>
+        <input id="txt_confirmaSenha" type="password" name="txt_confirmaSenha">
+        <label for="txt_confirmaSenha" class="active">Confirmar senha</label>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn waves-effect waves-light right" type="submit" name="action">
+        Editar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Corpo da Consulta de Projetos -->
+<div class="input-field col s6 s12 red-text">
+  <i class="red-text material-icons prefix">search</i>
+  <input type="text" placeholder="Pesquisar" id="autocomplete-input" class="autocomplete red-text">
+</div>
+<table class="responsive-table bordered striped centered highlight">
+  <thead>
+    <tr>
+      <th>Usuário</th>
+      <th>Profissional</th>
+      <th>Detalhes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gsantos</td>
+      <td>Gabriel Santos</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>usuario</td>
+      <td>Usuario Oliveira</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>user</td>
+      <td>User Thompson</td>
+      <td>
+        <a class="modal-trigger" href="#modalTeste">
+          <i class="material-icons">remove_red_eye</i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

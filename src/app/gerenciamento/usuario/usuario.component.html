@@ -1,3 +1,38 @@
-<p>
-  usuario works!
-</p>
+<!--App do modal-->
+<!--Modal-->
+<div class="container">
+
+  <ul class="tabs">
+    <li class="tab col s3">
+      <a href="#tabsConsultaProjetos">Usuários</a>
+    </li>
+    <li class="tab col s3">
+      <a class="active" href="#tabsNovoProjeto">Novo Usuário</a>
+    </li>
+  </ul>
+
+  <!-- TABS 1 -->
+  <div id="tabsConsultaProjetos" class="col s12">
+    <div class="card">
+      <app-consulta-usuario></app-consulta-usuario>
+    </div>
+  </div>
+  <!-- TABS 2 -->
+  <div id="tabsNovoProjeto" class="col s12">
+
+    <ul class="collapsible" data-collapsible="accordion">
+
+      <!--1º Passo-->
+      <li>
+        <div class="collapsible-header active">
+          <i class="material-icons col">add_to_home_screen</i>
+
+          Cadastrar um Usuário
+        </div>
+        <div class="collapsible-body">
+          <app-cadastro-usuario></app-cadastro-usuario>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

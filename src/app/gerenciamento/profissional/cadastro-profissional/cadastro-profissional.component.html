@@ -1,0 +1,121 @@
+<div class="modal" id="modalAddApps">
+  <div class="modal-content">
+    <div class="col s12 l12 m12">
+      <h5>Contatos de: {{cliente}}</h5>
+      <div class="divider"></div>
+    </div>
+
+    <div class="col s12 l3 m6 right">
+      <a href="/contato" target="_blank" class="btn waves-effect waves-light" type="submit" name="action">
+        Novo
+        <i class="material-icons right">add</i>
+      </a>
+    </div>
+    <table class="responsive-table bordered striped centered highlight">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Associar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rogério</td>
+          <td>ralmeida@cliente.com.br</td>
+          <td class="centered">
+            <a href="/projeto">
+              <i class="material-icons">add</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 l12 m12">
+    <h4>Profissional</h4>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12 l6 m6">
+    <i class="material-icons prefix">add_to_home_screen</i>
+    <input id="txt_nomeApp" type="text" name="txt_nomeApp">
+    <label for="txt_nomeApp">Nome do Profissional</label>
+  </div>
+  <div class="input-field col s12 l6 m6">
+    <i class="material-icons prefix">open_in_browser</i>
+    <select name="slt_tipoApp" id="slt_produtoApp">
+      <option value="">Desenvolvimento</option>
+      <option value="">Suporte Técnico</option>
+      <option value="">Comercial</option>
+    </select>
+    <label for="slt_produtoApp">Setor</label>
+  </div>
+  <div class="input-field col s12 l6 l5 m6">
+    <i class="material-icons prefix">phonelink_setup</i>
+    <select name="slt_produtoApp" id="slt_produtoApp">
+      <option value="">Programador Sênior</option>
+      <option value="">Programador Pleno</option>
+      <option value="">Programador Júnior</option>
+      <option value="">Programador Trainee</option>
+    </select>
+    <label for="slt_produtoApp">Função</label>
+  </div>
+
+  <div class="col s12 l12 m12">
+    <h5>Departamentos</h5>
+    <div class="divider"></div>
+  </div>
+  <div class="row">
+    <div class="col s12 l12 m12">
+      <div class="input-field col s9 offset-l2 l7 offset-m2 m7">
+        <input id="txt_dptoApp" class="align-center" type="text" name="txt_dptoApp">
+        <label for="txt_dptoApp">Inserir departamento</label>
+      </div>
+      <div class="input-field col s2 l2 m2">
+        <a class="btn-floating left btn-small waves-effect waves-light" type="submit" name="action">
+          <i class="material-icons">add</i>
+        </a>
+      </div>
+      <div class="col s12 offset-l1 l10 offset-m1 m10">
+        <table class="responsive-table centered striped centered highlight">
+          <thead>
+            <tr>
+              <th>Departamento</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Operação Alpha Vita</td>
+              <td>
+                <a class="modal-trigger" href="#modalTeste">
+                  <i class="material-icons">delete</i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Operação CIAB</td>
+              <td>
+                <a class="modal-trigger" href="#modalTeste">
+                  <i class="material-icons">delete</i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <button class="btn waves-effect waves-light right" type="submit" name="action">
+    Confirmar
+    <i class="material-icons right">send</i>
+  </button>
+</div>

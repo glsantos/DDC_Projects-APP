@@ -49,21 +49,29 @@
     <label for="txt_nomeApp">Nome do Aplicativo</label>
   </div>
   <div class="input-field col s12 l5 m6">
+    <i class="material-icons prefix">open_in_browser</i>
+    <select name="slt_tipoApp" id="slt_produtoApp">
+      <option value="" selected disabled>Selecione um Tipo de App</option>
+      <option value="">Tela</option>
+      <option value="">Relatório</option>
+      <option value="">Dashboard</option>
+    </select>
+    <label for="slt_produtoApp">Tipo de App</label>
+  </div>
+  <div class="input-field col s12 offset-l1 l5 m6">
     <i class="material-icons prefix">phonelink_setup</i>
     <select name="slt_produtoApp" id="slt_produtoApp">
+      <option value="" selected disabled>Selecione um Produto</option>
       <option value="">a</option>
       <option value="">b</option>
       <option value="">c</option>
     </select>
     <label for="slt_produtoApp">Produto</label>
   </div>
-  <div class="input-field col s4 offset-l1 l2 m3">
-    <i class="material-icons prefix">gamepad</i>
-    <input id="txt_preProdApp" type="text" value="KSE" name="txt_preProdApp" readonly>
-  </div>
-  <div class="input-field col s8 l3 m3">
-    <input id="txt_prefixoApp" type="text" name="txt_prefixoApp">
-    <label for="txt_prefixoApp">Prefixo do App</label>
+  <div class="input-field col s12 l5 m6">
+    <i class="material-icons prefix">control_camera</i>
+    <input id="txt_prefixoApp" class="align-center" value="KSST250" type="text" name="txt_prefixoApp" readonly>
+    <label for="txt_prefixoApp" class="active">Prefixo do App</label>
   </div>
 
 

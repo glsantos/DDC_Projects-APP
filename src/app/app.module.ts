@@ -42,6 +42,12 @@ import { CadastroProdutoComponent } from './gerenciamento/produto/cadastro-produ
 import { ConsultaProdutoComponent } from './gerenciamento/produto/consulta-produto/consulta-produto.component';
 import { ConsultaAplicativoComponent } from './gerenciamento/aplicativo/consulta-aplicativo/consulta-aplicativo.component';
 import { CadastroAplicativoComponent } from './gerenciamento/aplicativo/cadastro-aplicativo/cadastro-aplicativo.component';
+import { ConsultaProfissionalComponent } from './gerenciamento/profissional/consulta-profissional/consulta-profissional.component';
+import { CadastroProfissionalComponent } from './gerenciamento/profissional/cadastro-profissional/cadastro-profissional.component';
+import { CadastroUsuarioComponent } from './gerenciamento/usuario/cadastro-usuario/cadastro-usuario.component';
+import { ConsultaUsuarioComponent } from './gerenciamento/usuario/consulta-usuario/consulta-usuario.component';
+import { ConsultaPermissaoComponent } from './gerenciamento/permissao/consulta-permissao/consulta-permissao.component';
+import { CadastroPermissaoComponent } from './gerenciamento/permissao/cadastro-permissao/cadastro-permissao.component';
 
 
 @NgModule({
@@ -79,6 +85,12 @@ import { CadastroAplicativoComponent } from './gerenciamento/aplicativo/cadastro
     ConsultaProdutoComponent,
     ConsultaAplicativoComponent,
     CadastroAplicativoComponent,
+    ConsultaProfissionalComponent,
+    CadastroProfissionalComponent,
+    CadastroUsuarioComponent,
+    ConsultaUsuarioComponent,
+    ConsultaPermissaoComponent,
+    CadastroPermissaoComponent,
   ],
   imports: [
     BrowserModule,

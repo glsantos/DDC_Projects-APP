@@ -4,11 +4,11 @@ declare var $: any;
 declare var JQuery: any;
 
 @Component({
-  selector: 'app-cadastro-aplicativo',
-  templateUrl: './cadastro-aplicativo.component.html',
-  styleUrls: ['./cadastro-aplicativo.component.css']
+  selector: 'app-cadastro-usuario',
+  templateUrl: './cadastro-usuario.component.html',
+  styleUrls: ['./cadastro-usuario.component.css']
 })
-export class CadastroAplicativoComponent implements OnInit {
+export class CadastroUsuarioComponent implements OnInit {
 
   constructor() { }
 
